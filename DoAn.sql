@@ -12,6 +12,10 @@
 -- DROP TABLE THELOAI;
 -- DROP TABLE DATVE;
 
+
+-- bonus point
+-- Gioi tinh khuyen mai
+
 CREATE TABLE NGUOIDUNG (
     taiKhoan SMALLINT NOT NULL,
     matKhau NVARCHAR2(30),

@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="S_PRODUCT" directorySegmentName="seg_0" id="7144266E-B70C-150E-AA44-2AE3354CF7B5">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:40 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<schemaObject>FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>01EDFCCE-CF5E-D3E3-A356-86ADC8574099</segment>
+<tableSpace>A00B7BA2-9417-978D-8699-B26903F3D59B</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="WHLSL_UNITS" id="0C0EDCC6-EBC7-5B2D-39AC-388B675458CA">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SHORT_DESC" id="23AD524C-F0E8-E63B-7988-610EC006FECA">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAME" id="B88556C3-55DD-C968-AFD6-74F045D1A1E3">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="C1D5A45C-D223-4292-89AA-E8EB135E6610">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="SUGGESTED_WHLSL_PRICE" id="EE51EB86-6277-5543-3D99-CFA4E9F18AFD">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="S_PRODUCT_ID_PK" id="50769E91-C287-65D3-A4E8-03597D8609D3">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<schemaObject>FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C</schemaObject>
+<segment>FB8B4EA9-E7AF-1193-3243-8BC40FD4D7D3</segment>
+<tableSpace>A00B7BA2-9417-978D-8699-B26903F3D59B</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="S_PRODUCT_NAME_UK" id="FE774989-8E96-1962-78CA-0DEEFC110BBE">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<schemaObject>FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C</schemaObject>
+<segment>FB8B4EA9-E7AF-1193-3243-8BC40FD4D7D3</segment>
+<tableSpace>A00B7BA2-9417-978D-8699-B26903F3D59B</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="S_PRODUCT_ID_PK" id="781A83EA-C8FE-8801-F80F-3B2FA0C85AA8">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<segment>FB8B4EA9-E7AF-1193-3243-8BC40FD4D7D3</segment>
+<tableSpace>A00B7BA2-9417-978D-8699-B26903F3D59B</tableSpace>
+<existingIndex>50769E91-C287-65D3-A4E8-03597D8609D3</existingIndex>
+<indexSegment>FB8B4EA9-E7AF-1193-3243-8BC40FD4D7D3</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="S_PRODUCT_NAME_UK" id="93FD3649-CE38-349C-5040-6C3FDC2802D6">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<segment>FB8B4EA9-E7AF-1193-3243-8BC40FD4D7D3</segment>
+<tableSpace>A00B7BA2-9417-978D-8699-B26903F3D59B</tableSpace>
+<existingIndex>FE774989-8E96-1962-78CA-0DEEFC110BBE</existingIndex>
+<indexSegment>FB8B4EA9-E7AF-1193-3243-8BC40FD4D7D3</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev12c>

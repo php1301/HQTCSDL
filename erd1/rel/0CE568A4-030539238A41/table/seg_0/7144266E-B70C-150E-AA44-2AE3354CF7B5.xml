@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7144266E-B70C-150E-AA44-2AE3354CF7B5" schemaObject="FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C" name="S_PRODUCT">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_PRODUCT</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:40 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="C1D5A45C-D223-4292-89AA-E8EB135E6610">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_PRODUCT</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>S_PRODUCT_ID_NN</notNullConstraintName>
+</Column>
+<Column name="NAME" id="B88556C3-55DD-C968-AFD6-74F045D1A1E3">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_PRODUCT</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>S_PRODUCT_NAME_NN</notNullConstraintName>
+</Column>
+<Column name="SHORT_DESC" id="23AD524C-F0E8-E63B-7988-610EC006FECA">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_PRODUCT</sourceObjSchema>
+<sourceObjName>SHORT_DESC</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SUGGESTED_WHLSL_PRICE" id="EE51EB86-6277-5543-3D99-CFA4E9F18AFD">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_PRODUCT</sourceObjSchema>
+<sourceObjName>SUGGESTED_WHLSL_PRICE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,11,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="WHLSL_UNITS" id="0C0EDCC6-EBC7-5B2D-39AC-388B675458CA">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_PRODUCT</sourceObjSchema>
+<sourceObjName>WHLSL_UNITS</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="781A83EA-C8FE-8801-F80F-3B2FA0C85AA8" name="S_PRODUCT_ID_PK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_PRODUCT_ID_PK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C1D5A45C-D223-4292-89AA-E8EB135E6610"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="93FD3649-CE38-349C-5040-6C3FDC2802D6" name="S_PRODUCT_NAME_UK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_PRODUCT_NAME_UK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B88556C3-55DD-C968-AFD6-74F045D1A1E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="50769E91-C287-65D3-A4E8-03597D8609D3" schemaObject="FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C" name="S_PRODUCT_ID_PK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_PRODUCT_ID_PK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C1D5A45C-D223-4292-89AA-E8EB135E6610"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FE774989-8E96-1962-78CA-0DEEFC110BBE" schemaObject="FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C" name="S_PRODUCT_NAME_UK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_PRODUCT_NAME_UK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B88556C3-55DD-C968-AFD6-74F045D1A1E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

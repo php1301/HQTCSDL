@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="S_CUSTOMER" directorySegmentName="seg_0" id="8EED4457-7512-2FC6-59AC-B756EA8B3009">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:40 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<schemaObject>FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>01EDFCCE-CF5E-D3E3-A356-86ADC8574099</segment>
+<tableSpace>A00B7BA2-9417-978D-8699-B26903F3D59B</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="SALES_REP_ID" id="01661FB9-1E85-C529-4543-37D5177A5D30">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REGION_ID" id="08D580F1-44DA-4517-9876-42C515D148A9">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="561BFAC5-14CD-1826-4D88-104F9D985182">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COMMENTS" id="57424EBE-4BD0-3C9A-D555-B65B332C1CC0">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CITY" id="63749DBF-249E-A85C-778C-13CC9F5E8BCA">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="STATE" id="65ED8964-284E-C735-617F-62572414C657">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PHONE" id="A6C66D8D-43F2-CD7A-4F07-C361CAED47BF">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ZIP_CODE" id="B21118BF-90BB-49B0-90C3-AA6771D51856">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAME" id="D5E10028-474B-32B7-E016-BEBC2B5BACD2">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ADDRESS" id="E726524A-6B4B-FD43-81BF-3DC77A5CD879">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CREDIT_RATING" id="EBBD6C10-4258-0718-2DB0-C7601B7B4F65">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COUNTRY" id="F18CEC1E-8540-9ABF-FBBD-5C671EBEC92D">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="S_CUSTOMER_ID_PK" id="7CCECE98-669B-867E-EEAF-4E54D7078FC4">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<schemaObject>FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C</schemaObject>
+<segment>FB8B4EA9-E7AF-1193-3243-8BC40FD4D7D3</segment>
+<tableSpace>A00B7BA2-9417-978D-8699-B26903F3D59B</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="S_CUSTOMER_REGION_ID_FK" id="5486890C-6D3A-2B50-9175-1A3728CB0E43">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:43 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="S_SALES_REP_ID_FK" id="6166B8E0-9CC2-829E-4077-1E311687DBC8">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:43 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="S_CUSTOMER_ID_PK" id="5FCABCF9-CE3C-AD3E-9332-7C1240CC7251">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<segment>FB8B4EA9-E7AF-1193-3243-8BC40FD4D7D3</segment>
+<tableSpace>A00B7BA2-9417-978D-8699-B26903F3D59B</tableSpace>
+<existingIndex>7CCECE98-669B-867E-EEAF-4E54D7078FC4</existingIndex>
+<indexSegment>FB8B4EA9-E7AF-1193-3243-8BC40FD4D7D3</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

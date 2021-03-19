@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="S_TITLE" directorySegmentName="seg_0" id="769570DA-D177-99D0-B5EA-20142F562A81">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:40 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<schemaObject>FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>01EDFCCE-CF5E-D3E3-A356-86ADC8574099</segment>
+<tableSpace>A00B7BA2-9417-978D-8699-B26903F3D59B</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="TITLE" id="8289D6BD-DE86-6D77-3249-114A24DC30CD">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="S_TITLE_TITLE_PK" id="B205E6F9-2FD8-1B26-CD2B-82635B4AC110">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<schemaObject>FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C</schemaObject>
+<segment>FB8B4EA9-E7AF-1193-3243-8BC40FD4D7D3</segment>
+<tableSpace>A00B7BA2-9417-978D-8699-B26903F3D59B</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="S_TITLE_TITLE_PK" id="4D0D1E91-0855-B98D-7A8C-ABB6C2A7F245">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<segment>FB8B4EA9-E7AF-1193-3243-8BC40FD4D7D3</segment>
+<tableSpace>A00B7BA2-9417-978D-8699-B26903F3D59B</tableSpace>
+<existingIndex>B205E6F9-2FD8-1B26-CD2B-82635B4AC110</existingIndex>
+<indexSegment>FB8B4EA9-E7AF-1193-3243-8BC40FD4D7D3</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

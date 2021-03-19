@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="71308701-F3E4-4854-C5CA-73C86F93C408" schemaObject="FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C" name="S_REGION">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_REGION</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:40 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="CEBB5234-6CC9-FD05-DEDC-AE1CD1C33D44">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_REGION</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>S_REGION_ID_NN</notNullConstraintName>
+</Column>
+<Column name="NAME" id="BEC4B821-D2C9-71F5-B497-CA882D6850D0">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_REGION</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>S_REGION_NAME_NN</notNullConstraintName>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7A708901-72E2-4A90-D03A-DDADEA859C06" name="S_REGION_ID_PK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_REGION_ID_PK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CEBB5234-6CC9-FD05-DEDC-AE1CD1C33D44"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="726B7CC1-4566-1724-A946-EC70E1905E6C" name="S_REGION_NAME_UK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_REGION_NAME_UK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BEC4B821-D2C9-71F5-B497-CA882D6850D0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BF57FC18-04FA-DE08-5C0F-A825E72F8038" schemaObject="FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C" name="S_REGION_ID_PK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_REGION_ID_PK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CEBB5234-6CC9-FD05-DEDC-AE1CD1C33D44"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0959987B-0480-3CF1-75E9-04AA53637CE0" schemaObject="FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C" name="S_REGION_NAME_UK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_REGION_NAME_UK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BEC4B821-D2C9-71F5-B497-CA882D6850D0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

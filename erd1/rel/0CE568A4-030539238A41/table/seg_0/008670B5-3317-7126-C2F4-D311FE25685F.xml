@@ -1,0 +1,203 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="008670B5-3317-7126-C2F4-D311FE25685F" schemaObject="FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C" name="S_ORD">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_ORD</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:40 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="51855E50-5705-EE1E-E8CE-129F7E0E2D73">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_ORD</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>S_ORD_ID_NN</notNullConstraintName>
+</Column>
+<Column name="CUSTOMER_ID" id="369B68B7-F7A2-4775-ABE1-C6D27146DE3D">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_ORD</sourceObjSchema>
+<sourceObjName>CUSTOMER_ID</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>S_ORD_CUSTOMER_ID_NN</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="217ACA63-FA31-EB02-60F5-CA2F703E24D5" referredColumn="561BFAC5-14CD-1826-4D88-104F9D985182"/>
+</associations>
+</Column>
+<Column name="DATE_ORDERED" id="FF627DC5-1D79-19D8-1E74-786DBB90104C">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_ORD</sourceObjSchema>
+<sourceObjName>DATE_ORDERED</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATE_SHIPPED" id="05DB47F1-6BBD-32C4-B73F-B0EA5A2A2C21">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_ORD</sourceObjSchema>
+<sourceObjName>DATE_SHIPPED</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SALES_REP_ID" id="DD7D6F9B-A9CD-56B4-D244-8743DA565F1D">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_ORD</sourceObjSchema>
+<sourceObjName>SALES_REP_ID</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F92662C3-D71D-455E-2846-6E44F5054BF0" referredColumn="B740ED70-0A83-1C17-376A-D05D0D70D30A"/>
+</associations>
+</Column>
+<Column name="TOTAL" id="8410DF8B-4A0C-E88D-F225-31BF9E2DAA02">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_ORD</sourceObjSchema>
+<sourceObjName>TOTAL</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,11,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAYMENT_TYPE" id="101C8388-5563-F0F7-B864-05838FAE16E8">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_ORD</sourceObjSchema>
+<sourceObjName>PAYMENT_TYPE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<constraintName>S_ORD_PAYMENT_TYPE_CK</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;CASH&apos;" description=""/>
+<valueDef value="&apos;CREDIT&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>6 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ORDER_FILLED" id="E9721EAF-3E40-9746-5816-4CC1762F003A">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_ORD</sourceObjSchema>
+<sourceObjName>ORDER_FILLED</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<constraintName>S_ORD_ORDER_FILLED_CK</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;N&apos;" description=""/>
+<valueDef value="&apos;Y&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FE66FA3D-C41B-C097-4D50-A1962A65E85F" name="S_ORD_ID_PK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_ORD_ID_PK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51855E50-5705-EE1E-E8CE-129F7E0E2D73"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7C23C5C5-D5F8-2F02-4B1A-042E19991691" schemaObject="FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C" name="S_ORD_ID_PK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_ORD_ID_PK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51855E50-5705-EE1E-E8CE-129F7E0E2D73"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A233932A-1152-ABD8-28F6-0B1BDF8C4AB5" name="S_ORD_CUSTOMER_ID_FK">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:43 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="369B68B7-F7A2-4775-ABE1-C6D27146DE3D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DBD1A232-6E01-1D8A-7B5D-9A0C07425114" name="S_ORD_SALES_REP_ID_FK">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:43 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DD7D6F9B-A9CD-56B4-D244-8743DA565F1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

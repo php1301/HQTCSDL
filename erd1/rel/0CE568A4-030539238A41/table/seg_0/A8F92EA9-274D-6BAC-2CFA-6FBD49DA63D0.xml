@@ -1,0 +1,286 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A8F92EA9-274D-6BAC-2CFA-6FBD49DA63D0" schemaObject="FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C" name="S_EMP">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_EMP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:40 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="B740ED70-0A83-1C17-376A-D05D0D70D30A">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_EMP</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>S_EMP_ID_NN</notNullConstraintName>
+</Column>
+<Column name="LAST_NAME" id="C85A6CC3-BEBF-7B65-5DBF-3C263D5E24EB">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_EMP</sourceObjSchema>
+<sourceObjName>LAST_NAME</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>S_EMP_LAST_NAME_NN</notNullConstraintName>
+</Column>
+<Column name="FIRST_NAME" id="A7FE2EAD-505B-7DD6-9CE4-90FE061ECFE1">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_EMP</sourceObjSchema>
+<sourceObjName>FIRST_NAME</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USERID" id="B415BA0B-7A62-8DAA-6851-803E4AB0DFA6">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_EMP</sourceObjSchema>
+<sourceObjName>USERID</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 BYTE</dataTypeSize>
+<ownDataTypeParameters>8 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>S_EMP_USERID_NN</notNullConstraintName>
+</Column>
+<Column name="START_DATE" id="EBCCDD30-0F8D-C955-B0D4-559EBB35CC5D">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_EMP</sourceObjSchema>
+<sourceObjName>START_DATE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMMENTS" id="D581F037-B133-8C51-66A5-491C6FDA6EAE">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_EMP</sourceObjSchema>
+<sourceObjName>COMMENTS</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MANAGER_ID" id="07CB6DCA-9351-9E2F-82DE-6DF52619C0AC">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_EMP</sourceObjSchema>
+<sourceObjName>MANAGER_ID</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CD59DF46-6188-9325-F7F0-F9345725C896" referredColumn="B740ED70-0A83-1C17-376A-D05D0D70D30A"/>
+</associations>
+</Column>
+<Column name="TITLE" id="E1B13551-86C7-A3E0-696A-92C31B41EB37">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_EMP</sourceObjSchema>
+<sourceObjName>TITLE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CEC38090-E9B1-A7B8-829A-5B72AEDA8EF1" referredColumn="8289D6BD-DE86-6D77-3249-114A24DC30CD"/>
+</associations>
+</Column>
+<Column name="DEPT_ID" id="52CBEC44-8F88-E248-6920-4878C3CF15D7">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_EMP</sourceObjSchema>
+<sourceObjName>DEPT_ID</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F63ED537-A55C-B630-BEB3-1C2106CC094E" referredColumn="1E2F010F-03A0-5D3C-ABDF-052E427D2087"/>
+</associations>
+</Column>
+<Column name="SALARY" id="7A2CD62A-2628-81EF-EA03-7D26B027074E">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_EMP</sourceObjSchema>
+<sourceObjName>SALARY</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,11,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COMMISSION_PCT" id="357DADD5-E55A-A880-665B-D79864F0550A">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_EMP</sourceObjSchema>
+<sourceObjName>COMMISSION_PCT</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<constraintName>S_EMP_COMMISSION_PCT_CK</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<listOfValues>
+<valueDef value="10" description=""/>
+<valueDef value="12.5" description=""/>
+<valueDef value="15" description=""/>
+<valueDef value="17.5" description=""/>
+<valueDef value="20" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="130F6180-A988-0FC6-68D8-534F8A165F28" name="S_EMP_ID_PK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_EMP_ID_PK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B740ED70-0A83-1C17-376A-D05D0D70D30A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="39AFD776-5DB7-1CF3-66DF-C8D2B318354A" name="S_EMP_USERID_UK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_EMP_USERID_UK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B415BA0B-7A62-8DAA-6851-803E4AB0DFA6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3346D92A-77B9-BB4F-2D52-FAFE7DB871AB" schemaObject="FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C" name="S_EMP_ID_PK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_EMP_ID_PK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B740ED70-0A83-1C17-376A-D05D0D70D30A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2B7770C6-FF0B-8843-9B16-F0B871122257" schemaObject="FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C" name="S_EMP_USERID_UK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_EMP_USERID_UK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B415BA0B-7A62-8DAA-6851-803E4AB0DFA6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="43E71DB9-4AC7-235A-683D-AED607343610" name="S_EMP_DEPT_ID_FK">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:43 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="52CBEC44-8F88-E248-6920-4878C3CF15D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A7536B05-54B3-51D9-3414-7941CC2C0A06" name="S_EMP_MANAGER_ID_FK">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:43 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="07CB6DCA-9351-9E2F-82DE-6DF52619C0AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3366B947-CDA0-FC5D-9C31-19FF2AC57522" name="S_EMP_TITLE_FK">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:43 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E1B13551-86C7-A3E0-696A-92C31B41EB37"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

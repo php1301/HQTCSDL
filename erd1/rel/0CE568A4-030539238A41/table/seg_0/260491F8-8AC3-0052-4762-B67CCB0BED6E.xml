@@ -1,0 +1,195 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="260491F8-8AC3-0052-4762-B67CCB0BED6E" schemaObject="FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C" name="S_ITEM">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_ITEM</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:40 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ORD_ID" id="ED23E65D-2257-55D6-A75F-DFA9DFF979A4">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_ITEM</sourceObjSchema>
+<sourceObjName>ORD_ID</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>S_ITEM_ORD_ID_NN</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="41BAC84B-5699-C1B8-5C2F-6AEE2FA7FF99" referredColumn="51855E50-5705-EE1E-E8CE-129F7E0E2D73"/>
+</associations>
+</Column>
+<Column name="ITEM_ID" id="8ABCFC77-B944-CA1A-3D63-71C59574E56C">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_ITEM</sourceObjSchema>
+<sourceObjName>ITEM_ID</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>S_ITEM_ITEM_ID_NN</notNullConstraintName>
+</Column>
+<Column name="PRODUCT_ID" id="399583C4-D5C3-7AC9-6817-FF4BA34EF80D">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_ITEM</sourceObjSchema>
+<sourceObjName>PRODUCT_ID</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>S_ITEM_PRODUCT_ID_NN</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="4A95D210-8C0A-BE53-8BC7-DACF2D06A35E" referredColumn="C1D5A45C-D223-4292-89AA-E8EB135E6610"/>
+</associations>
+</Column>
+<Column name="PRICE" id="F3B9F9B5-BADF-0D82-18E6-9D5D85918FC6">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_ITEM</sourceObjSchema>
+<sourceObjName>PRICE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,11,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="QUANTITY" id="2916AB60-AA31-C56F-9032-4E153DF2CDB5">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_ITEM</sourceObjSchema>
+<sourceObjName>QUANTITY</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="QUANTITY_SHIPPED" id="2308162A-2581-8FDC-230C-DC1F7F762497">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_ITEM</sourceObjSchema>
+<sourceObjName>QUANTITY_SHIPPED</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2EF5FEDD-CEAC-DB24-E180-29FEAE48107A" name="S_ITEM_ORDID_ITEMID_PK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_ITEM_ORDID_ITEMID_PK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED23E65D-2257-55D6-A75F-DFA9DFF979A4"/>
+<colUsage columnID="8ABCFC77-B944-CA1A-3D63-71C59574E56C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="69431CF0-797C-D9F3-3C0E-4BF959C72DE8" name="S_ITEM_ORDID_PRODID_UK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_ITEM_ORDID_PRODID_UK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED23E65D-2257-55D6-A75F-DFA9DFF979A4"/>
+<colUsage columnID="399583C4-D5C3-7AC9-6817-FF4BA34EF80D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="63DE4D0E-3841-2286-5167-6FCFDD1B83B5" schemaObject="FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C" name="S_ITEM_ORDID_ITEMID_PK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_ITEM_ORDID_ITEMID_PK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED23E65D-2257-55D6-A75F-DFA9DFF979A4"/>
+<colUsage columnID="8ABCFC77-B944-CA1A-3D63-71C59574E56C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0095AEB8-EF3B-6ED7-BA48-D39854DDE4D5" schemaObject="FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C" name="S_ITEM_ORDID_PRODID_UK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_ITEM_ORDID_PRODID_UK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED23E65D-2257-55D6-A75F-DFA9DFF979A4"/>
+<colUsage columnID="399583C4-D5C3-7AC9-6817-FF4BA34EF80D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8C4CD161-BA9D-6CB8-383E-163345700D52" name="S_ITEM_ORD_ID_FK">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:43 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED23E65D-2257-55D6-A75F-DFA9DFF979A4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="06FCDDB9-2BF5-C7E5-AC9C-61FE66BC0FAF" name="S_ITEM_PRODUCT_ID_FK">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:43 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="399583C4-D5C3-7AC9-6817-FF4BA34EF80D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

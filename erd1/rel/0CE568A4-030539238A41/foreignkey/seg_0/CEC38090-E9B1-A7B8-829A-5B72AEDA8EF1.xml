@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CEC38090-E9B1-A7B8-829A-5B72AEDA8EF1" containerWithKeyObject="A8F92EA9-274D-6BAC-2CFA-6FBD49DA63D0" localFKIndex="3366B947-CDA0-FC5D-9C31-19FF2AC57522" name="S_EMP_TITLE_FK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_EMP_TITLE_FK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:43 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<referredTableLongName>C##PHP1301.S_TITLE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>769570DA-D177-99D0-B5EA-20142F562A81</referredTableID>
+<keyObject>4D0D1E91-0855-B98D-7A8C-ABB6C2A7F245</keyObject>
+<referredKeyID>4D0D1E91-0855-B98D-7A8C-ABB6C2A7F245</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>TITLE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

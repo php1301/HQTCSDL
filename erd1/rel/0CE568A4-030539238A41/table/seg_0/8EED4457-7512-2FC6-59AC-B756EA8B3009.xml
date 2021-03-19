@@ -1,0 +1,258 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8EED4457-7512-2FC6-59AC-B756EA8B3009" schemaObject="FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C" name="S_CUSTOMER">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_CUSTOMER</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:40 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="561BFAC5-14CD-1826-4D88-104F9D985182">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_CUSTOMER</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>S_CUSTOMER_ID_NN</notNullConstraintName>
+</Column>
+<Column name="NAME" id="D5E10028-474B-32B7-E016-BEBC2B5BACD2">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_CUSTOMER</sourceObjSchema>
+<sourceObjName>NAME</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>S_CUSTOMER_NAME_NN</notNullConstraintName>
+</Column>
+<Column name="PHONE" id="A6C66D8D-43F2-CD7A-4F07-C361CAED47BF">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_CUSTOMER</sourceObjSchema>
+<sourceObjName>PHONE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADDRESS" id="E726524A-6B4B-FD43-81BF-3DC77A5CD879">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_CUSTOMER</sourceObjSchema>
+<sourceObjName>ADDRESS</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>400 BYTE</dataTypeSize>
+<ownDataTypeParameters>400 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CITY" id="63749DBF-249E-A85C-778C-13CC9F5E8BCA">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_CUSTOMER</sourceObjSchema>
+<sourceObjName>CITY</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STATE" id="65ED8964-284E-C735-617F-62572414C657">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_CUSTOMER</sourceObjSchema>
+<sourceObjName>STATE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COUNTRY" id="F18CEC1E-8540-9ABF-FBBD-5C671EBEC92D">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_CUSTOMER</sourceObjSchema>
+<sourceObjName>COUNTRY</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ZIP_CODE" id="B21118BF-90BB-49B0-90C3-AA6771D51856">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_CUSTOMER</sourceObjSchema>
+<sourceObjName>ZIP_CODE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>75 BYTE</dataTypeSize>
+<ownDataTypeParameters>75 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREDIT_RATING" id="EBBD6C10-4258-0718-2DB0-C7601B7B4F65">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_CUSTOMER</sourceObjSchema>
+<sourceObjName>CREDIT_RATING</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<constraintName>S_CUSTOMER_CREDIT_RATING_CK</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="&apos;EXCELLENT&apos;" description=""/>
+<valueDef value="&apos;GOOD&apos;" description=""/>
+<valueDef value="&apos;POOR&apos;" description=""/>
+</listOfValues>
+<ownDataTypeParameters>9 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SALES_REP_ID" id="01661FB9-1E85-C529-4543-37D5177A5D30">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_CUSTOMER</sourceObjSchema>
+<sourceObjName>SALES_REP_ID</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="03C69A1F-19B0-4B14-6FDB-3F6005041421" referredColumn="B740ED70-0A83-1C17-376A-D05D0D70D30A"/>
+</associations>
+</Column>
+<Column name="REGION_ID" id="08D580F1-44DA-4517-9876-42C515D148A9">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_CUSTOMER</sourceObjSchema>
+<sourceObjName>REGION_ID</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,7,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E16CF3B7-8DB2-539E-ED5A-A085DFC3E239" referredColumn="CEBB5234-6CC9-FD05-DEDC-AE1CD1C33D44"/>
+</associations>
+</Column>
+<Column name="COMMENTS" id="57424EBE-4BD0-3C9A-D555-B65B332C1CC0">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>S_CUSTOMER</sourceObjSchema>
+<sourceObjName>COMMENTS</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:41 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5FCABCF9-CE3C-AD3E-9332-7C1240CC7251" name="S_CUSTOMER_ID_PK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_CUSTOMER_ID_PK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="561BFAC5-14CD-1826-4D88-104F9D985182"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7CCECE98-669B-867E-EEAF-4E54D7078FC4" schemaObject="FD8D625A-7BFD-7FB7-CF7B-FDF344D8F40C" name="S_CUSTOMER_ID_PK">
+<sourceConnName>Learning</sourceConnName>
+<sourceObjSchema>C##PHP1301</sourceObjSchema>
+<sourceObjName>S_CUSTOMER_ID_PK</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:42 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="561BFAC5-14CD-1826-4D88-104F9D985182"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5486890C-6D3A-2B50-9175-1A3728CB0E43" name="S_CUSTOMER_REGION_ID_FK">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:43 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="08D580F1-44DA-4517-9876-42C515D148A9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6166B8E0-9CC2-829E-4077-1E311687DBC8" name="S_SALES_REP_ID_FK">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-19 06:51:43 UTC</createdTime>
+<ownerDesignName>erd1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="01661FB9-1E85-C529-4543-37D5177A5D30"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

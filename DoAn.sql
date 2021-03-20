@@ -1,27 +1,34 @@
--- DROP TABLE VE;
--- DROP TABLE LOAINGUOIDUNG;
--- DROP TABLE NGUOIDUNG;
--- DROP TABLE LICHCHIEU;
--- DROP TABLE GHE;
--- DROP TABLE LOAIGHE;
--- DROP TABLE HETHONGRAP;
--- DROP TABLE CUMRAP;
--- DROP TABLE RAP;
--- DROP TABLE PHIM_THELOAI;
--- DROP TABLE PHIM;
--- DROP TABLE THELOAI;
--- DROP TABLE DATVE;
 
+BEGIN
 
+FOR c IN (SELECT table_name FROM user_tables) LOOP
+EXECUTE IMMEDIATE ('DROP TABLE "' || c.table_name || '" CASCADE CONSTRAINTS');
+END LOOP;
+
+FOR s IN (SELECT sequence_name FROM user_sequences) LOOP
+EXECUTE IMMEDIATE ('DROP SEQUENCE ' || s.sequence_name);
+END LOOP;
+
+END;
+
+CREATE SEQUENCE taikhoan_seq
+  START WITH 1
+  INCREMENT BY 1
+  CACHE 100;
+  
+purge recyclebin
 -- bonus point
 -- Gioi tinh khuyen mai
 
 CREATE TABLE NGUOIDUNG (
-    taiKhoan SMALLINT NOT NULL,
-    matKhau NVARCHAR2(30),
-    email NVARCHAR2(30),
+--    taiKhoan SMALLINT GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1),
+    taiKhoan SMALLINT  DEFAULT dept_seq.nextval,
+
+ DEFAULT dept_seq.nextval
+    matKhau NVARCHAR2(100),
+    email NVARCHAR2(30) UNIQUE,
     soDT NVARCHAR2(15),
-    maLoaiNguoiDung SMALLINT NOT NULL,
+    maLoaiNguoiDung SMALLINT DEFAULT 3,
     hoTen NVARCHAR2(15),
 
     CONSTRAINT PK_nguoidung PRIMARY KEY(taiKhoan)
@@ -29,7 +36,7 @@ CREATE TABLE NGUOIDUNG (
 
 CREATE TABLE LOAINGUOIDUNG (
     maLoaiNguoiDung SMALLINT NOT NULL,
-    tenLoai NVARCHAR2(30),
+    tenLoai VARCHAR2(30),
 
     CONSTRAINT PK_loainguoidung PRIMARY KEY(maLoaiNguoiDung)
 );
@@ -179,18 +186,18 @@ ALTER TABLE DATVE ADD CONSTRAINT FK_datve_ghe FOREIGN KEY(maGhe)REFERENCES GHE(m
 
 
 -- TRIGGER 1: GIA VE KHONG DUOC BE HON 0
-CREATE OR REPLACE TRIGGER VE_GIAVE
-BEFORE INSERT OR UPDATE
-ON VE    
-declare   
-v_giave ve.giave%TYPE;
-FOR EACH ROW 
-BEGIN 
-v_giave := :NEW.giave;
-    IF (v_giave < 0)
-    THEN
-        RAISE_APPLICATION_ERROR(-2000, 'GIA VE KHONG DUOC BE HON KHONG')
-    ELSE 
-        DBMS_OUTPUT.PUT_LINE('THEM VE THANH CONG')
-    END IF;
-END;
+--CREATE OR REPLACE TRIGGER VE_GIAVE
+--BEFORE INSERT OR UPDATE
+--ON VE    
+--declare   
+--v_giave ve.giave%TYPE;
+--FOR EACH ROW 
+--BEGIN 
+--v_giave := :NEW.giave;
+--    IF (v_giave < 0)
+--    THEN
+--        RAISE_APPLICATION_ERROR(-2000, 'GIA VE KHONG DUOC BE HON KHONG')
+--    ELSE 
+--        DBMS_OUTPUT.PUT_LINE('THEM VE THANH CONG')
+--    END IF;
+--END;

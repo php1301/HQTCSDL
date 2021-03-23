@@ -1,30 +1,23 @@
-
-BEGIN
-
-FOR c IN (SELECT table_name FROM user_tables) LOOP
-EXECUTE IMMEDIATE ('DROP TABLE "' || c.table_name || '" CASCADE CONSTRAINTS');
-END LOOP;
-
-FOR s IN (SELECT sequence_name FROM user_sequences) LOOP
-EXECUTE IMMEDIATE ('DROP SEQUENCE ' || s.sequence_name);
-END LOOP;
-
-END;
-
-CREATE SEQUENCE taikhoan_seq
-  START WITH 1
-  INCREMENT BY 1
-  CACHE 100;
-  
-purge recyclebin
+--
+--BEGIN
+--
+--FOR c IN (SELECT table_name FROM user_tables) LOOP
+--EXECUTE IMMEDIATE ('DROP TABLE "' || c.table_name || '" CASCADE CONSTRAINTS');
+--END LOOP;
+--
+--FOR s IN (SELECT sequence_name FROM user_sequences) LOOP
+--EXECUTE IMMEDIATE ('DROP SEQUENCE ' || s.sequence_name);
+--END LOOP;
+--
+--END;
+--
+--
+--purge recyclebin
 -- bonus point
 -- Gioi tinh khuyen mai
 
 CREATE TABLE NGUOIDUNG (
---    taiKhoan SMALLINT GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1),
-    taiKhoan SMALLINT  DEFAULT dept_seq.nextval,
-
- DEFAULT dept_seq.nextval
+    taiKhoan SMALLINT GENERATED as IDENTITY(START with 1 INCREMENT by 1),
     matKhau NVARCHAR2(100),
     email NVARCHAR2(30) UNIQUE,
     soDT NVARCHAR2(15),

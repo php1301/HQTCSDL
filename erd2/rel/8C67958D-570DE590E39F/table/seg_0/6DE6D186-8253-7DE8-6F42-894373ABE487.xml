@@ -1,0 +1,147 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6DE6D186-8253-7DE8-6F42-894373ABE487" schemaObject="3371E2E8-1838-FAD4-A20F-69E780DB3D21" name="GHE">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>GHE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:37 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MAGHE" id="5905267F-FD87-84E6-A293-BA9D824A8F81">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>GHE</sourceObjSchema>
+<sourceObjName>MAGHE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TENGHE" id="38F5E151-58DF-4451-7B1D-EE0FC63D3B09">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>GHE</sourceObjSchema>
+<sourceObjName>TENGHE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MARAP" id="23126FC7-6F36-A206-CCB6-643062B2A0A9">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>GHE</sourceObjSchema>
+<sourceObjName>MARAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STT" id="D1B9B9CD-8508-7E36-DF3B-126EAB419D59">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>GHE</sourceObjSchema>
+<sourceObjName>STT</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MALOAIGHE" id="9D8B24A1-7987-1677-7696-F20EE982CECD">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>GHE</sourceObjSchema>
+<sourceObjName>MALOAIGHE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AF32A0B4-0C8E-D202-792B-2844CEF329C3" referredColumn="081CBDCD-5AD1-C52F-BD69-765B05BE584D"/>
+</associations>
+</Column>
+<Column name="KICHHOAT" id="60087E6E-9285-80AC-4643-FB259D37FE14">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>GHE</sourceObjSchema>
+<sourceObjName>KICHHOAT</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<defaultValue>&apos;0&apos;</defaultValue>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4FAD0998-F492-D11C-3987-FF77CAF1A2DF" name="PK_GHE">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>PK_GHE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:41 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5905267F-FD87-84E6-A293-BA9D824A8F81"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EBA7D4E4-13DD-1C70-7F69-7B296F42FC23" schemaObject="3371E2E8-1838-FAD4-A20F-69E780DB3D21" name="PK_GHE">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>PK_GHE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:39 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5905267F-FD87-84E6-A293-BA9D824A8F81"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="712ED810-7B89-A8B2-5AF1-5991E434A1D6" name="FK_GHE_MALOAIGHE">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9D8B24A1-7987-1677-7696-F20EE982CECD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

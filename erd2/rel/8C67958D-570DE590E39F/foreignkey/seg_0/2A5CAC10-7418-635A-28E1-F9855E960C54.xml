@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2A5CAC10-7418-635A-28E1-F9855E960C54" containerWithKeyObject="84A21790-3B51-CCDA-4AC4-D8237B357985" localFKIndex="D15AE64F-A6AF-66B2-F842-83E4F47DBDC0" name="FK_LICHCHIEU_PHIM">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>FK_LICHCHIEU_PHIM</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<referredTableLongName>C##PROJECT.PHIM</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C6AB1924-0D53-D9E9-7D35-C4925BB5A15D</referredTableID>
+<keyObject>3CDE2936-29B4-DDED-78E6-7A7E1AB889E8</keyObject>
+<referredKeyID>3CDE2936-29B4-DDED-78E6-7A7E1AB889E8</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>MAPHIM</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

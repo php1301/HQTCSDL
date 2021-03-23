@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="VE" directorySegmentName="seg_0" id="FBC39FCE-77AF-A638-9B14-4B1851A3E2D7">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:37 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<schemaObject>3371E2E8-1838-FAD4-A20F-69E780DB3D21</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>1863CC17-92D3-77C1-9763-438B45661D04</segment>
+<tableSpace>38B94A01-B91A-3DAE-2214-FC26CDB2860A</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="GIAVE" id="0F78A327-E99C-215D-04CF-FC9E0C14F3D7">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TAIKHOANNGUOIDUNG" id="158D54D1-82C8-AEC5-1963-A0D110708861">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MALICHCHIEU" id="20688B2E-7662-91F3-5E93-EDDAD09E830A">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NGAYDAT" id="AB4D0C3F-D312-0F9F-C34F-8025F194BE57">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MAVE" id="E8128474-5A28-2B2D-2859-C37AF4DB02D2">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_VE" id="80D99433-7107-01B6-7E88-FD82B7F0B23C">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:39 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<schemaObject>3371E2E8-1838-FAD4-A20F-69E780DB3D21</schemaObject>
+<segment>949058CC-08F3-9243-676B-DF0919D0E13C</segment>
+<tableSpace>38B94A01-B91A-3DAE-2214-FC26CDB2860A</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_VE_NGUOIDUNG" id="2D395F27-B6EB-7AB5-BAFB-69EB2BCFAA93">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_VE" id="2FF8C775-5753-7670-489F-6D4E9D8735EC">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:41 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<segment>949058CC-08F3-9243-676B-DF0919D0E13C</segment>
+<tableSpace>38B94A01-B91A-3DAE-2214-FC26CDB2860A</tableSpace>
+<existingIndex>80D99433-7107-01B6-7E88-FD82B7F0B23C</existingIndex>
+<indexSegment>949058CC-08F3-9243-676B-DF0919D0E13C</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

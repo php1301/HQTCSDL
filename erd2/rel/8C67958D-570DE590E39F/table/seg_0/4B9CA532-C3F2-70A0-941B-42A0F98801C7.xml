@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4B9CA532-C3F2-70A0-941B-42A0F98801C7" schemaObject="3371E2E8-1838-FAD4-A20F-69E780DB3D21" name="DATVE">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>DATVE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:37 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MAVE" id="3DBE9E19-9E63-A766-71DC-CCE05AD6AE27">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>DATVE</sourceObjSchema>
+<sourceObjName>MAVE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3BFD02FE-03A4-C8A1-BDA5-C00B4F63F709" referredColumn="E8128474-5A28-2B2D-2859-C37AF4DB02D2"/>
+</associations>
+</Column>
+<Column name="MAGHE" id="017064E4-175F-5A71-4ED4-C4F3637DBF2F">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>DATVE</sourceObjSchema>
+<sourceObjName>MAGHE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C01EBED1-E214-614A-B850-E9B958129B47" referredColumn="5905267F-FD87-84E6-A293-BA9D824A8F81"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1A583421-DA3A-D7A7-7618-DCB8DBE8F0A5" name="PK_DATVE">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>PK_DATVE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:41 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3DBE9E19-9E63-A766-71DC-CCE05AD6AE27"/>
+<colUsage columnID="017064E4-175F-5A71-4ED4-C4F3637DBF2F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B9753087-3504-C5C1-B588-ACC0712DEB38" schemaObject="3371E2E8-1838-FAD4-A20F-69E780DB3D21" name="PK_DATVE">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>PK_DATVE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:39 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3DBE9E19-9E63-A766-71DC-CCE05AD6AE27"/>
+<colUsage columnID="017064E4-175F-5A71-4ED4-C4F3637DBF2F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5EE2D5D9-8B44-6CB0-4E3E-1C613E668BB8" name="FK_DATVE_GHE">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="017064E4-175F-5A71-4ED4-C4F3637DBF2F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FF04CD03-86E2-79A1-DDC2-14BA58FB50BF" name="FK_DATVE_VE">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3DBE9E19-9E63-A766-71DC-CCE05AD6AE27"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

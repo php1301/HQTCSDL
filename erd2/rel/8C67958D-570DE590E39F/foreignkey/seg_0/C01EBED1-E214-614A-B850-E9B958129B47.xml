@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C01EBED1-E214-614A-B850-E9B958129B47" containerWithKeyObject="4B9CA532-C3F2-70A0-941B-42A0F98801C7" localFKIndex="5EE2D5D9-8B44-6CB0-4E3E-1C613E668BB8" name="FK_DATVE_GHE">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>FK_DATVE_GHE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<referredTableLongName>C##PROJECT.GHE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6DE6D186-8253-7DE8-6F42-894373ABE487</referredTableID>
+<keyObject>4FAD0998-F492-D11C-3987-FF77CAF1A2DF</keyObject>
+<referredKeyID>4FAD0998-F492-D11C-3987-FF77CAF1A2DF</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>MAGHE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="THELOAI" directorySegmentName="seg_0" id="90C80B19-566F-53C7-E56D-C247C2FC21EF">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:37 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<schemaObject>3371E2E8-1838-FAD4-A20F-69E780DB3D21</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>1863CC17-92D3-77C1-9763-438B45661D04</segment>
+<tableSpace>38B94A01-B91A-3DAE-2214-FC26CDB2860A</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="TENTHELOAI" id="91A035E1-AF52-E95E-2374-1A3C26EE9D66">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MATHELOAI" id="94CBDF67-7E25-2F90-3E61-B4CC04D2F8C9">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_THELOAI" id="618D8F4F-9171-B9F7-BF4C-25E859198DC3">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:39 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<schemaObject>3371E2E8-1838-FAD4-A20F-69E780DB3D21</schemaObject>
+<segment>949058CC-08F3-9243-676B-DF0919D0E13C</segment>
+<tableSpace>38B94A01-B91A-3DAE-2214-FC26CDB2860A</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_THELOAI" id="EF828054-3A6C-4ABF-BD43-DCE1BECDC07C">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:41 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<segment>949058CC-08F3-9243-676B-DF0919D0E13C</segment>
+<tableSpace>38B94A01-B91A-3DAE-2214-FC26CDB2860A</tableSpace>
+<existingIndex>618D8F4F-9171-B9F7-BF4C-25E859198DC3</existingIndex>
+<indexSegment>949058CC-08F3-9243-676B-DF0919D0E13C</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

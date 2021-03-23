@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="6818A487-407F-F830-DB0A-91E0F00D0530" containerWithKeyObject="FBC39FCE-77AF-A638-9B14-4B1851A3E2D7" localFKIndex="2D395F27-B6EB-7AB5-BAFB-69EB2BCFAA93" name="FK_VE_NGUOIDUNG">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>FK_VE_NGUOIDUNG</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<referredTableLongName>C##PROJECT.NGUOIDUNG</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B0351B4F-2FEB-BC55-BB40-C3F628E623E3</referredTableID>
+<keyObject>74B05EC2-5CD8-2B74-EE9D-1051DE9488E7</keyObject>
+<referredKeyID>74B05EC2-5CD8-2B74-EE9D-1051DE9488E7</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>TAIKHOAN</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

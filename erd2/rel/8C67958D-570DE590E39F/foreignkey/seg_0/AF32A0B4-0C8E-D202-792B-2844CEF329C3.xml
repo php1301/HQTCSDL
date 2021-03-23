@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AF32A0B4-0C8E-D202-792B-2844CEF329C3" containerWithKeyObject="6DE6D186-8253-7DE8-6F42-894373ABE487" localFKIndex="712ED810-7B89-A8B2-5AF1-5991E434A1D6" name="FK_GHE_MALOAIGHE">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>FK_GHE_MALOAIGHE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<referredTableLongName>C##PROJECT.LOAIGHE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>5C24778C-266E-EF4B-1B0E-506CAF377D73</referredTableID>
+<keyObject>CDFF95ED-5F77-C7AE-1023-2FE890B1A54E</keyObject>
+<referredKeyID>CDFF95ED-5F77-C7AE-1023-2FE890B1A54E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>MALOAIGHE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

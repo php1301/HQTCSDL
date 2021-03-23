@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D399E893-C8FF-4E0E-385E-4500AF03E7A5" containerWithKeyObject="B0351B4F-2FEB-BC55-BB40-C3F628E623E3" localFKIndex="9502FE7C-48C7-7518-72B0-D7DABCBC8FD2" name="FK_NGUOIDUNG_LOAINGUOIDUNG">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>FK_NGUOIDUNG_LOAINGUOIDUNG</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<referredTableLongName>C##PROJECT.LOAINGUOIDUNG</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>BC8EDE92-4DF5-3CB2-D633-253776A4855A</referredTableID>
+<keyObject>4FFA09A0-624A-425D-484B-23818EFFBB52</keyObject>
+<referredKeyID>4FFA09A0-624A-425D-484B-23818EFFBB52</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>MALOAINGUOIDUNG</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

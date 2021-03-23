@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1ABA75EC-732B-F5FB-A657-FED1E1BCD3A3" schemaObject="3371E2E8-1838-FAD4-A20F-69E780DB3D21" name="HETHONGRAP">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>HETHONGRAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:37 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MAHETHONGRAP" id="4D3AD856-78B7-EC4D-E262-109AF4D9559C">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>HETHONGRAP</sourceObjSchema>
+<sourceObjName>MAHETHONGRAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TENHETHONGRAP" id="3BA3350C-0D06-666C-79FB-C33470C9A42D">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>HETHONGRAP</sourceObjSchema>
+<sourceObjName>TENHETHONGRAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BIDANH" id="0F9847ED-7512-E28B-5179-80AE222D29A6">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>HETHONGRAP</sourceObjSchema>
+<sourceObjName>BIDANH</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOGO" id="D82DDF36-1CAF-DABE-72A1-FE801B8FBF8D">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>HETHONGRAP</sourceObjSchema>
+<sourceObjName>LOGO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CDB5A8E8-E433-AEED-8BE5-51ACF654AFFD" name="PK_HETHONGRAP">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>PK_HETHONGRAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:41 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D3AD856-78B7-EC4D-E262-109AF4D9559C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1D65E1E4-D5DE-56BC-8E7D-C95B00205672" schemaObject="3371E2E8-1838-FAD4-A20F-69E780DB3D21" name="PK_HETHONGRAP">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>PK_HETHONGRAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:39 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D3AD856-78B7-EC4D-E262-109AF4D9559C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

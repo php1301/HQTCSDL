@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="DATVE" directorySegmentName="seg_0" id="4B9CA532-C3F2-70A0-941B-42A0F98801C7">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:37 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<schemaObject>3371E2E8-1838-FAD4-A20F-69E780DB3D21</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>1863CC17-92D3-77C1-9763-438B45661D04</segment>
+<tableSpace>38B94A01-B91A-3DAE-2214-FC26CDB2860A</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="MAGHE" id="017064E4-175F-5A71-4ED4-C4F3637DBF2F">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MAVE" id="3DBE9E19-9E63-A766-71DC-CCE05AD6AE27">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_DATVE" id="B9753087-3504-C5C1-B588-ACC0712DEB38">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:39 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<schemaObject>3371E2E8-1838-FAD4-A20F-69E780DB3D21</schemaObject>
+<segment>949058CC-08F3-9243-676B-DF0919D0E13C</segment>
+<tableSpace>38B94A01-B91A-3DAE-2214-FC26CDB2860A</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_DATVE_GHE" id="5EE2D5D9-8B44-6CB0-4E3E-1C613E668BB8">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_DATVE_VE" id="FF04CD03-86E2-79A1-DDC2-14BA58FB50BF">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_DATVE" id="1A583421-DA3A-D7A7-7618-DCB8DBE8F0A5">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:41 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<segment>949058CC-08F3-9243-676B-DF0919D0E13C</segment>
+<tableSpace>38B94A01-B91A-3DAE-2214-FC26CDB2860A</tableSpace>
+<existingIndex>B9753087-3504-C5C1-B588-ACC0712DEB38</existingIndex>
+<indexSegment>949058CC-08F3-9243-676B-DF0919D0E13C</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

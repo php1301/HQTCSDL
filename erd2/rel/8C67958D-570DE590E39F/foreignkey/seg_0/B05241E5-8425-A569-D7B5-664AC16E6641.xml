@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B05241E5-8425-A569-D7B5-664AC16E6641" containerWithKeyObject="6CC82346-DF2B-D57C-B067-CDF72DD72E4F" localFKIndex="B9038D06-7C81-60A4-CC22-3DE111DC51BB" name="FK_CUMRAP_HETHONGRAP">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>FK_CUMRAP_HETHONGRAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<referredTableLongName>C##PROJECT.HETHONGRAP</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1ABA75EC-732B-F5FB-A657-FED1E1BCD3A3</referredTableID>
+<keyObject>CDB5A8E8-E433-AEED-8BE5-51ACF654AFFD</keyObject>
+<referredKeyID>CDB5A8E8-E433-AEED-8BE5-51ACF654AFFD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>MAHETHONGRAP</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

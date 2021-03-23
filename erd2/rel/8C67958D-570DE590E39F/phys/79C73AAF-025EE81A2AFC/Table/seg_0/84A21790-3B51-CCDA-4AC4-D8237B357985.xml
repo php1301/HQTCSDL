@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="LICHCHIEU" directorySegmentName="seg_0" id="84A21790-3B51-CCDA-4AC4-D8237B357985">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:37 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<schemaObject>3371E2E8-1838-FAD4-A20F-69E780DB3D21</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>1863CC17-92D3-77C1-9763-438B45661D04</segment>
+<tableSpace>38B94A01-B91A-3DAE-2214-FC26CDB2860A</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NGAYCHIEUGIOCHIEU" id="00B8736D-63F3-6948-7206-52F769D63ACB">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MALICHCHIEU" id="02B6396E-F491-BE6A-76EB-32CB893A85ED">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MARAP" id="33CFD773-F6A0-6F02-3627-2F723A7A50C7">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MAHETHONGRAP" id="60A391EE-2FD7-4F2F-EC3C-3B45A07CBCEC">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MAPHIM" id="A40F0693-3D6C-23B1-0040-D2709EE396ED">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MACUMRAP" id="A47AB67C-F53C-8B6E-63CF-A6515DEC5874">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="THOILUONG" id="A7EAE744-9CA3-4DBA-D28B-93A891D58E30">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="GIAVE" id="D9F42BA4-7467-7752-3A71-1176C6B6E627">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_LICHCHIEU" id="6BCE831E-A3AA-14FA-8858-020C1C1E33C2">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:39 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<schemaObject>3371E2E8-1838-FAD4-A20F-69E780DB3D21</schemaObject>
+<segment>949058CC-08F3-9243-676B-DF0919D0E13C</segment>
+<tableSpace>38B94A01-B91A-3DAE-2214-FC26CDB2860A</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_VE_LICHCHIEU" id="1E52D8A1-FAE0-A61F-8D0A-50EC2C741936">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_LICHCHIEU_CUMRAP" id="75928133-2D74-7660-C3CB-40F3633AD9F7">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_LICHCHIEU_HETHONGRAP" id="C23D4F51-D7CB-4CA9-66CF-E7F3EA41434A">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_LICHCHIEU_PHIM" id="D15AE64F-A6AF-66B2-F842-83E4F47DBDC0">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_LICHCHIEU_RAP" id="D8FABC82-D5C4-B463-75BD-D35242556FC7">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_LICHCHIEU" id="499B443A-37A0-1BB7-8BA7-D7F89CF8395C">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:41 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<segment>949058CC-08F3-9243-676B-DF0919D0E13C</segment>
+<tableSpace>38B94A01-B91A-3DAE-2214-FC26CDB2860A</tableSpace>
+<existingIndex>6BCE831E-A3AA-14FA-8858-020C1C1E33C2</existingIndex>
+<indexSegment>949058CC-08F3-9243-676B-DF0919D0E13C</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

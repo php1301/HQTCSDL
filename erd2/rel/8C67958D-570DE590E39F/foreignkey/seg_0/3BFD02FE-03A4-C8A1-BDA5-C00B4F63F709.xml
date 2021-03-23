@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3BFD02FE-03A4-C8A1-BDA5-C00B4F63F709" containerWithKeyObject="4B9CA532-C3F2-70A0-941B-42A0F98801C7" localFKIndex="FF04CD03-86E2-79A1-DDC2-14BA58FB50BF" name="FK_DATVE_VE">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>FK_DATVE_VE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<referredTableLongName>C##PROJECT.VE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FBC39FCE-77AF-A638-9B14-4B1851A3E2D7</referredTableID>
+<keyObject>2FF8C775-5753-7670-489F-6D4E9D8735EC</keyObject>
+<referredKeyID>2FF8C775-5753-7670-489F-6D4E9D8735EC</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>MAVE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

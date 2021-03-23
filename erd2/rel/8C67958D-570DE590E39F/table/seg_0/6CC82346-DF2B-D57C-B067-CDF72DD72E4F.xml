@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6CC82346-DF2B-D57C-B067-CDF72DD72E4F" schemaObject="3371E2E8-1838-FAD4-A20F-69E780DB3D21" name="CUMRAP">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>CUMRAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:37 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MACUMRAP" id="575B4288-2A92-2489-FEF4-E1D29F3D2DC2">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>CUMRAP</sourceObjSchema>
+<sourceObjName>MACUMRAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TENCUMRAP" id="50F3D839-EEA5-CD3B-B5D9-E36ECBC7A615">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>CUMRAP</sourceObjSchema>
+<sourceObjName>TENCUMRAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="THONGTIN" id="168ED7A1-0DDE-100A-BD29-0BDEAF49E89F">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>CUMRAP</sourceObjSchema>
+<sourceObjName>THONGTIN</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MAHETHONGRAP" id="155728F8-C108-C038-98B9-CABCBB48F8E8">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>CUMRAP</sourceObjSchema>
+<sourceObjName>MAHETHONGRAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B05241E5-8425-A569-D7B5-664AC16E6641" referredColumn="4D3AD856-78B7-EC4D-E262-109AF4D9559C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3A00EFC2-C286-BF88-2A60-0140B98475CB" name="PK_CUMRAP">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>PK_CUMRAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:41 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="575B4288-2A92-2489-FEF4-E1D29F3D2DC2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F938AFC3-40FB-F367-61AF-1B1C81718F7E" schemaObject="3371E2E8-1838-FAD4-A20F-69E780DB3D21" name="PK_CUMRAP">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>PK_CUMRAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:39 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="575B4288-2A92-2489-FEF4-E1D29F3D2DC2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B9038D06-7C81-60A4-CC22-3DE111DC51BB" name="FK_CUMRAP_HETHONGRAP">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="155728F8-C108-C038-98B9-CABCBB48F8E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,167 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B0351B4F-2FEB-BC55-BB40-C3F628E623E3" schemaObject="3371E2E8-1838-FAD4-A20F-69E780DB3D21" name="NGUOIDUNG">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>NGUOIDUNG</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:37 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TAIKHOAN" id="70DCA1E5-5E27-0FCC-35EE-90018CDABCD3">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>NGUOIDUNG</sourceObjSchema>
+<sourceObjName>TAIKHOAN</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementGenerateAlways>true</autoIncrementGenerateAlways>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="MATKHAU" id="1AE52CF6-7EBF-8322-FF9F-9E2F61558A0C">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>NGUOIDUNG</sourceObjSchema>
+<sourceObjName>MATKHAU</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="16E09692-4172-7C9B-4EBB-24E22A12D13A">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>NGUOIDUNG</sourceObjSchema>
+<sourceObjName>EMAIL</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SODT" id="FEC8B83F-6BC0-0476-1076-5EC6A96DD65F">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>NGUOIDUNG</sourceObjSchema>
+<sourceObjName>SODT</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MALOAINGUOIDUNG" id="B7DEA5EB-93F7-977E-F906-B62D94F62CFE">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>NGUOIDUNG</sourceObjSchema>
+<sourceObjName>MALOAINGUOIDUNG</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>3</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D399E893-C8FF-4E0E-385E-4500AF03E7A5" referredColumn="8A06CE64-BEDA-1328-59A0-DA06B5568AFC"/>
+</associations>
+</Column>
+<Column name="HOTEN" id="7795FA68-5C9E-FB50-0F77-9684EAA8288F">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>NGUOIDUNG</sourceObjSchema>
+<sourceObjName>HOTEN</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="74B05EC2-5CD8-2B74-EE9D-1051DE9488E7" name="PK_NGUOIDUNG">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>PK_NGUOIDUNG</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:41 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="70DCA1E5-5E27-0FCC-35EE-90018CDABCD3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EFB850A3-4F7A-C680-9901-0CA7FA2B34D7" schemaObject="3371E2E8-1838-FAD4-A20F-69E780DB3D21" name="NGUOIDUNG_EMAIL_UN">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>SYS_C008579</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:39 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="16E09692-4172-7C9B-4EBB-24E22A12D13A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2072924A-4B73-E28E-4E74-DF24B4117CB2" schemaObject="3371E2E8-1838-FAD4-A20F-69E780DB3D21" name="PK_NGUOIDUNG">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>PK_NGUOIDUNG</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:39 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="70DCA1E5-5E27-0FCC-35EE-90018CDABCD3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9502FE7C-48C7-7518-72B0-D7DABCBC8FD2" name="FK_NGUOIDUNG_LOAINGUOIDUNG">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B7DEA5EB-93F7-977E-F906-B62D94F62CFE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9592D75E-F89A-5FE1-2D69-5E25081C931B" containerWithKeyObject="AC35672C-D10A-1D00-3DE5-0791A0AE200C" localFKIndex="135D6E35-5DA8-8937-A2CA-3FDF17AFF3E8" name="FK_PHIM_THELOAI_THELOAI">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>FK_PHIM_THELOAI_THELOAI</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<referredTableLongName>C##PROJECT.THELOAI</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>90C80B19-566F-53C7-E56D-C247C2FC21EF</referredTableID>
+<keyObject>EF828054-3A6C-4ABF-BD43-DCE1BECDC07C</keyObject>
+<referredKeyID>EF828054-3A6C-4ABF-BD43-DCE1BECDC07C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>MATHELOAI</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

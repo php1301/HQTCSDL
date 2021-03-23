@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0CCD90C6-F8DB-4F2A-45C1-DE8D07B661FC" containerWithKeyObject="84A21790-3B51-CCDA-4AC4-D8237B357985" localFKIndex="1E52D8A1-FAE0-A61F-8D0A-50EC2C741936" name="FK_VE_LICHCHIEU">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>FK_VE_LICHCHIEU</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<referredTableLongName>C##PROJECT.LICHCHIEU</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>84A21790-3B51-CCDA-4AC4-D8237B357985</referredTableID>
+<keyObject>499B443A-37A0-1BB7-8BA7-D7F89CF8395C</keyObject>
+<referredKeyID>499B443A-37A0-1BB7-8BA7-D7F89CF8395C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>MALICHCHIEU</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,228 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="84A21790-3B51-CCDA-4AC4-D8237B357985" schemaObject="3371E2E8-1838-FAD4-A20F-69E780DB3D21" name="LICHCHIEU">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>LICHCHIEU</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:37 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MALICHCHIEU" id="02B6396E-F491-BE6A-76EB-32CB893A85ED">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>LICHCHIEU</sourceObjSchema>
+<sourceObjName>MALICHCHIEU</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0CCD90C6-F8DB-4F2A-45C1-DE8D07B661FC" referredColumn="02B6396E-F491-BE6A-76EB-32CB893A85ED"/>
+</associations>
+</Column>
+<Column name="MAPHIM" id="A40F0693-3D6C-23B1-0040-D2709EE396ED">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>LICHCHIEU</sourceObjSchema>
+<sourceObjName>MAPHIM</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2A5CAC10-7418-635A-28E1-F9855E960C54" referredColumn="3CBBE796-6493-0235-2393-EA5D5EEA4F5D"/>
+</associations>
+</Column>
+<Column name="MARAP" id="33CFD773-F6A0-6F02-3627-2F723A7A50C7">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>LICHCHIEU</sourceObjSchema>
+<sourceObjName>MARAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A3B59429-3A6C-996A-0FB9-4023DE9C3B7C" referredColumn="76B63DEB-34DF-63CA-64DB-C41DE9E51091"/>
+</associations>
+</Column>
+<Column name="MACUMRAP" id="A47AB67C-F53C-8B6E-63CF-A6515DEC5874">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>LICHCHIEU</sourceObjSchema>
+<sourceObjName>MACUMRAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5DBAEA45-87FD-51BE-31D6-4FF15A7C63AD" referredColumn="575B4288-2A92-2489-FEF4-E1D29F3D2DC2"/>
+</associations>
+</Column>
+<Column name="MAHETHONGRAP" id="60A391EE-2FD7-4F2F-EC3C-3B45A07CBCEC">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>LICHCHIEU</sourceObjSchema>
+<sourceObjName>MAHETHONGRAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="10EE3D38-A5C6-F0AE-703F-CFEF9B687A8F" referredColumn="4D3AD856-78B7-EC4D-E262-109AF4D9559C"/>
+</associations>
+</Column>
+<Column name="NGAYCHIEUGIOCHIEU" id="00B8736D-63F3-6948-7206-52F769D63ACB">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>LICHCHIEU</sourceObjSchema>
+<sourceObjName>NGAYCHIEUGIOCHIEU</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GIAVE" id="D9F42BA4-7467-7752-3A71-1176C6B6E627">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>LICHCHIEU</sourceObjSchema>
+<sourceObjName>GIAVE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="THOILUONG" id="A7EAE744-9CA3-4DBA-D28B-93A891D58E30">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>LICHCHIEU</sourceObjSchema>
+<sourceObjName>THOILUONG</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="499B443A-37A0-1BB7-8BA7-D7F89CF8395C" name="PK_LICHCHIEU">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>PK_LICHCHIEU</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:41 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02B6396E-F491-BE6A-76EB-32CB893A85ED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6BCE831E-A3AA-14FA-8858-020C1C1E33C2" schemaObject="3371E2E8-1838-FAD4-A20F-69E780DB3D21" name="PK_LICHCHIEU">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>PK_LICHCHIEU</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:39 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02B6396E-F491-BE6A-76EB-32CB893A85ED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="75928133-2D74-7660-C3CB-40F3633AD9F7" name="FK_LICHCHIEU_CUMRAP">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A47AB67C-F53C-8B6E-63CF-A6515DEC5874"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C23D4F51-D7CB-4CA9-66CF-E7F3EA41434A" name="FK_LICHCHIEU_HETHONGRAP">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="60A391EE-2FD7-4F2F-EC3C-3B45A07CBCEC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D15AE64F-A6AF-66B2-F842-83E4F47DBDC0" name="FK_LICHCHIEU_PHIM">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A40F0693-3D6C-23B1-0040-D2709EE396ED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D8FABC82-D5C4-B463-75BD-D35242556FC7" name="FK_LICHCHIEU_RAP">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33CFD773-F6A0-6F02-3627-2F723A7A50C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1E52D8A1-FAE0-A61F-8D0A-50EC2C741936" name="FK_VE_LICHCHIEU">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02B6396E-F491-BE6A-76EB-32CB893A85ED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

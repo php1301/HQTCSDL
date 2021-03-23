@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="PHIM" directorySegmentName="seg_0" id="C6AB1924-0D53-D9E9-7D35-C4925BB5A15D">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:37 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<schemaObject>3371E2E8-1838-FAD4-A20F-69E780DB3D21</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>1863CC17-92D3-77C1-9763-438B45661D04</segment>
+<tableSpace>38B94A01-B91A-3DAE-2214-FC26CDB2860A</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="MOTA" id="0880FAFF-9E7E-F050-470A-2CE2A381D142">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="BIDANH" id="0FA99A3C-8B90-61DA-60EC-EF300EB6C58B">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MAPHIM" id="3CBBE796-6493-0235-2393-EA5D5EEA4F5D">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HINHANH" id="40EF4C9A-16ED-D308-E857-F2C7B5ABDBC0">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TRAILER" id="47865C67-BFFE-9645-5AF8-368B5EF95205">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NGAYKHOICHIEU" id="4C258A6D-C565-9FCF-7DBB-0D96068BE4CA">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TENPHIM" id="6A9EC6FD-8EB5-0B68-4469-B1E480F35CE3">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DAXOA" id="6D3F92F1-08A1-50EC-9ADC-F0C84282111E">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<defaultValue>&apos;0&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="DANHGIA" id="791FB606-3F6B-8679-E0B6-16C5C59A69A2">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_PHIM" id="E0CDFEBA-3653-F57B-0045-9ED7A20FA549">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:39 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<schemaObject>3371E2E8-1838-FAD4-A20F-69E780DB3D21</schemaObject>
+<segment>949058CC-08F3-9243-676B-DF0919D0E13C</segment>
+<tableSpace>38B94A01-B91A-3DAE-2214-FC26CDB2860A</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_PHIM" id="3CDE2936-29B4-DDED-78E6-7A7E1AB889E8">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:41 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<segment>949058CC-08F3-9243-676B-DF0919D0E13C</segment>
+<tableSpace>38B94A01-B91A-3DAE-2214-FC26CDB2860A</tableSpace>
+<existingIndex>E0CDFEBA-3653-F57B-0045-9ED7A20FA549</existingIndex>
+<indexSegment>949058CC-08F3-9243-676B-DF0919D0E13C</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

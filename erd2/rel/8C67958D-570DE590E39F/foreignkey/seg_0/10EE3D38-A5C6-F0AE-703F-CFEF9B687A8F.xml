@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="10EE3D38-A5C6-F0AE-703F-CFEF9B687A8F" containerWithKeyObject="84A21790-3B51-CCDA-4AC4-D8237B357985" localFKIndex="C23D4F51-D7CB-4CA9-66CF-E7F3EA41434A" name="FK_LICHCHIEU_HETHONGRAP">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>FK_LICHCHIEU_HETHONGRAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<referredTableLongName>C##PROJECT.HETHONGRAP</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1ABA75EC-732B-F5FB-A657-FED1E1BCD3A3</referredTableID>
+<keyObject>CDB5A8E8-E433-AEED-8BE5-51ACF654AFFD</keyObject>
+<referredKeyID>CDB5A8E8-E433-AEED-8BE5-51ACF654AFFD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>MAHETHONGRAP</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

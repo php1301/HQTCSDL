@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AC35672C-D10A-1D00-3DE5-0791A0AE200C" schemaObject="3371E2E8-1838-FAD4-A20F-69E780DB3D21" name="PHIM_THELOAI">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>PHIM_THELOAI</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:37 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MAPHIM" id="A6BC2620-7628-000D-BFF5-8BC4B61216DB">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>PHIM_THELOAI</sourceObjSchema>
+<sourceObjName>MAPHIM</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FB8AA122-3504-0370-8EDC-40ED8404C2C8" referredColumn="3CBBE796-6493-0235-2393-EA5D5EEA4F5D"/>
+</associations>
+</Column>
+<Column name="MATHELOAI" id="D9614151-B5BB-9288-2AB3-D901957EFDE6">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>PHIM_THELOAI</sourceObjSchema>
+<sourceObjName>MATHELOAI</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:38 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9592D75E-F89A-5FE1-2D69-5E25081C931B" referredColumn="94CBDF67-7E25-2F90-3E61-B4CC04D2F8C9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="70BC45D4-D9A9-FBB2-092C-C1A3B58545E9" name="PK_PHIM_THELOAI">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>PK_PHIM_THELOAI</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:41 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6BC2620-7628-000D-BFF5-8BC4B61216DB"/>
+<colUsage columnID="D9614151-B5BB-9288-2AB3-D901957EFDE6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BCBEEBF7-58EA-B5D6-EE77-6076DE7BD0B3" schemaObject="3371E2E8-1838-FAD4-A20F-69E780DB3D21" name="PK_PHIM_THELOAI">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>PK_PHIM_THELOAI</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:39 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6BC2620-7628-000D-BFF5-8BC4B61216DB"/>
+<colUsage columnID="D9614151-B5BB-9288-2AB3-D901957EFDE6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3B4AF429-4D26-BC0C-8CCE-4B9405AF3BC3" name="FK_PHIM_THELOAI_PHIM">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6BC2620-7628-000D-BFF5-8BC4B61216DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="135D6E35-5DA8-8937-A2CA-3FDF17AFF3E8" name="FK_PHIM_THELOAI_THELOAI">
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D9614151-B5BB-9288-2AB3-D901957EFDE6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

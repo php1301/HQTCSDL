@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5DBAEA45-87FD-51BE-31D6-4FF15A7C63AD" containerWithKeyObject="84A21790-3B51-CCDA-4AC4-D8237B357985" localFKIndex="75928133-2D74-7660-C3CB-40F3633AD9F7" name="FK_LICHCHIEU_CUMRAP">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>FK_LICHCHIEU_CUMRAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<referredTableLongName>C##PROJECT.CUMRAP</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6CC82346-DF2B-D57C-B067-CDF72DD72E4F</referredTableID>
+<keyObject>3A00EFC2-C286-BF88-2A60-0140B98475CB</keyObject>
+<referredKeyID>3A00EFC2-C286-BF88-2A60-0140B98475CB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>MACUMRAP</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

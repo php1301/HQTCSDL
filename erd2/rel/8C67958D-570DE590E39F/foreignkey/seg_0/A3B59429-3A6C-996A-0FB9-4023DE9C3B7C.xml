@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A3B59429-3A6C-996A-0FB9-4023DE9C3B7C" containerWithKeyObject="84A21790-3B51-CCDA-4AC4-D8237B357985" localFKIndex="D8FABC82-D5C4-B463-75BD-D35242556FC7" name="FK_LICHCHIEU_RAP">
+<sourceConnName>Project</sourceConnName>
+<sourceObjSchema>C##PROJECT</sourceObjSchema>
+<sourceObjName>FK_LICHCHIEU_RAP</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2021-03-23 00:58:42 UTC</createdTime>
+<ownerDesignName>erd2</ownerDesignName>
+<referredTableLongName>C##PROJECT.RAP</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>CBFA6309-402A-8080-D253-341A60EFA2F0</referredTableID>
+<keyObject>7F1B8077-2D16-C7FF-4F6F-52D5F2AFF79A</keyObject>
+<referredKeyID>7F1B8077-2D16-C7FF-4F6F-52D5F2AFF79A</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>MARAP</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

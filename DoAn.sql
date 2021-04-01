@@ -195,3 +195,49 @@ ALTER TABLE DATVE ADD CONSTRAINT FK_datve_ghe FOREIGN KEY(maGhe)REFERENCES GHE(m
 --        DBMS_OUTPUT.PUT_LINE('THEM VE THANH CONG')
 --    END IF;
 --END;
+
+
+-- Stored Procedure 
+
+-- SP-1: Paggination and sorting
+create or replace procedure GetResults 
+(
+ p_userId In Number,
+ p_dueDateFrom In Date,
+ p_dueDateTo in Date,
+ p_durationMax in Number,
+ p_durationMin in Number,
+ p_sortColumn In Varchar2,
+ p_sortOrder In Varchar2,
+ p_pageSize In Number,
+ p_pageIndex in number,
+ cv_1 OUT SYS_REFCURSOR
+)
+as 
+v_FirstIndex   NUMBER;
+v_LastIndex    NUMBER;
+begin
+-- Paging
+  v_LastIndex := p_pageSize * (p_pageIndex + 1);
+  v_FirstIndex := v_LastIndex - p_pageSize + 1;
+
+ OPEN cv_1 FOR 
+
+  SELECT * FROM (SELECT a.*, ROWNUM AS rnum
+              FROM (Select * From Newjob nj Where nj.userId = p_userId  
+               -- Filtering
+             And ((p_dueDateFrom IS NULL AND p_dueDateTo Is NULL) OR 
+                  (nj.Due_Date >= p_dueDateFrom and nj.Due_Date <= p_dueDateTo)
+                 )
+             And ((p_durationMax IS NULL AND p_durationMin Is NULL) OR 
+                  (nj.Duration >= p_durationMax and nj.Duration <= p_durationMin)
+                 )   
+             -- Sorting     
+            order by   
+            Case when p_sortOrder = 'Ascending' And p_sortColumn = 'DUE_DATE' then  nj.Due_Date End,
+            Case When p_sortOrder = 'Ascending' And p_sortColumn = 'DURATION' then nj.DURATION end,     
+            Case when p_sortOrder = 'Descending' And p_sortColumn = 'DUE_DATE' then  nj.Due_Date End desc,
+            Case When p_sortOrder = 'Descending' And p_sortColumn = 'DURATION' then nj.DURATION end desc)a
+   WHERE ROWNUM <= v_LastIndex)    
+   WHERE rnum >= v_FirstIndex;
+end;

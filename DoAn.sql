@@ -10,21 +10,29 @@
 --END LOOP;
 --
 --END;
---
---
+
+
 --purge recyclebin
 -- bonus point
 -- Gioi tinh khuyen mai
 
-CREATE TABLE NGUOIDUNG (
+CREATE TABLE USERS (
     taiKhoan SMALLINT GENERATED as IDENTITY(START with 1 INCREMENT by 1),
-    matKhau NVARCHAR2(100),
+    password NVARCHAR2(100),
     email NVARCHAR2(30) UNIQUE,
     soDT NVARCHAR2(15),
     maLoaiNguoiDung SMALLINT DEFAULT 3,
     hoTen NVARCHAR2(15),
 
     CONSTRAINT PK_nguoidung PRIMARY KEY(taiKhoan)
+);
+
+CREATE TABLE USERCREDENTIALS (
+    isbn SMALLINT GENERATED as IDENTITY(START with 1 INCREMENT by 1),
+    password NVARCHAR2(100),
+    taiKhoan SMALLINT not null,
+    
+    CONSTRAINT PK_usercredentials PRIMARY KEY(isbn)
 );
 
 CREATE TABLE LOAINGUOIDUNG (
@@ -66,26 +74,26 @@ CREATE TABLE LOAIGHE (
 );
 
 CREATE TABLE RAP (
-    maRap SMALLINT NOT NULL,
+    maRap SMALLINT GENERATED as IDENTITY(START with 1 INCREMENT by 1),
     tenRap NVARCHAR2(50),
     soGhe INT,
-    maCumRap SMALLINT NOT NULL,
+    maCumRap VARCHAR2(1024),
 
     CONSTRAINT PK_rap PRIMARY KEY(maRap)
 );
 
 
 CREATE TABLE CUMRAP (
-    maCumRap SMALLINT NOT NULL,
+    maCumRap VARCHAR2(1024),
     tenCumRap NVARCHAR2(50),
     thongTin NVARCHAR2(50),
-    maHeThongRap SMALLINT NOT NULL,
+    maHeThongRap VARCHAR2(1024),
 
     CONSTRAINT PK_cumrap PRIMARY KEY(maCumRap)
 );
 
 CREATE TABLE HETHONGRAP (
-    maHeThongRap SMALLINT NOT NULL,
+    maHeThongRap VARCHAR2(1024),
     tenHeThongRap NVARCHAR2(50),
     biDanh NVARCHAR2(20),
     logo NVARCHAR2(50),
@@ -95,7 +103,7 @@ CREATE TABLE HETHONGRAP (
 
 
 CREATE TABLE PHIM (
-    maPhim SMALLINT NOT NULL,
+    maPhim SMALLINT GENERATED as IDENTITY(START with 1 INCREMENT by 1),
     tenPhim NVARCHAR2(50),
     trailer NVARCHAR2(50),
     hinhAnh NVARCHAR2(50),
@@ -123,11 +131,11 @@ CREATE TABLE PHIM_THELOAI (
 );
 
 CREATE TABLE LICHCHIEU (
-    maLichChieu SMALLINT NOT NULL,
+    maLichChieu SMALLINT GENERATED as IDENTITY(START with 1 INCREMENT by 1),
     maPhim SMALLINT NOT NULL,
     maRap SMALLINT NOT NULL,
-    maCumRap SMALLINT NOT NULL,
-    maHeThongRap SMALLINT NOT NULL,
+    maCumRap VARCHAR2(1024),
+    maHeThongRap VARCHAR2(1024),
     ngayChieuGioChieu DATE,
     giaVe NUMBER,
     thoiLuong SMALLINT,
@@ -143,12 +151,16 @@ CREATE TABLE DATVE (
 );
 
 
--- NGUOIDUNG
-ALTER TABLE NGUOIDUNG ADD CONSTRAINT FK_nguoidung_loainguoidung FOREIGN KEY(maLoaiNguoiDung) REFERENCES LOAINGUOIDUNG(maLoaiNguoiDung);
+-- USERS
+ALTER TABLE USERS ADD CONSTRAINT FK_nguoidung_loainguoidung FOREIGN KEY(maLoaiNguoiDung) REFERENCES LOAINGUOIDUNG(maLoaiNguoiDung);
+
+-- USERCREDENTIALS
+ALTER TABLE USERCREDENTIALS ADD CONSTRAINT FK_usercredentials_user FOREIGN KEY(taiKhoan) REFERENCES USERS(taiKhoan);
 
 -- LOAINGUOIDUNG
+
 -- VE
-ALTER TABLE VE ADD CONSTRAINT FK_ve_nguoidung FOREIGN KEY(taiKhoanNguoiDung) REFERENCES NGUOIDUNG(taiKhoan);
+ALTER TABLE VE ADD CONSTRAINT FK_ve_nguoidung FOREIGN KEY(taiKhoanNguoiDung) REFERENCES USERS(taiKhoan);
 ALTER TABLE LICHCHIEU ADD CONSTRAINT FK_ve_lichchieu FOREIGN KEY (maLichChieu) REFERENCES LICHCHIEU(maLichChieu);
 
 -- GHE
@@ -159,7 +171,9 @@ ALTER TABLE RAP ADD CONSTRAINT FK_rap_cumrap FOREIGN KEY(maCumRap) REFERENCES CU
 
 -- CUMRAP
 ALTER TABLE CUMRAP ADD CONSTRAINT FK_cumrap_hethongrap FOREIGN KEY(maHeThongRap) REFERENCES HETHONGRAP(maHeThongRap);
+--INSERT INTO CUMRAP VALUES('CGV','CGV','CGV','CGV');
 
+--alter table cumrap modify mahethongrap nvarchar2(50);
 -- HETHONGRAP
 -- PHIM
 -- THELOAI
@@ -200,44 +214,44 @@ ALTER TABLE DATVE ADD CONSTRAINT FK_datve_ghe FOREIGN KEY(maGhe)REFERENCES GHE(m
 -- Stored Procedure 
 
 -- SP-1: Paggination and sorting
-create or replace procedure GetResults 
-(
- p_userId In Number,
- p_dueDateFrom In Date,
- p_dueDateTo in Date,
- p_durationMax in Number,
- p_durationMin in Number,
- p_sortColumn In Varchar2,
- p_sortOrder In Varchar2,
- p_pageSize In Number,
- p_pageIndex in number,
- cv_1 OUT SYS_REFCURSOR
-)
-as 
-v_FirstIndex   NUMBER;
-v_LastIndex    NUMBER;
-begin
--- Paging
-  v_LastIndex := p_pageSize * (p_pageIndex + 1);
-  v_FirstIndex := v_LastIndex - p_pageSize + 1;
-
- OPEN cv_1 FOR 
-
-  SELECT * FROM (SELECT a.*, ROWNUM AS rnum
-              FROM (Select * From Newjob nj Where nj.userId = p_userId  
-               -- Filtering
-             And ((p_dueDateFrom IS NULL AND p_dueDateTo Is NULL) OR 
-                  (nj.Due_Date >= p_dueDateFrom and nj.Due_Date <= p_dueDateTo)
-                 )
-             And ((p_durationMax IS NULL AND p_durationMin Is NULL) OR 
-                  (nj.Duration >= p_durationMax and nj.Duration <= p_durationMin)
-                 )   
-             -- Sorting     
-            order by   
-            Case when p_sortOrder = 'Ascending' And p_sortColumn = 'DUE_DATE' then  nj.Due_Date End,
-            Case When p_sortOrder = 'Ascending' And p_sortColumn = 'DURATION' then nj.DURATION end,     
-            Case when p_sortOrder = 'Descending' And p_sortColumn = 'DUE_DATE' then  nj.Due_Date End desc,
-            Case When p_sortOrder = 'Descending' And p_sortColumn = 'DURATION' then nj.DURATION end desc)a
-   WHERE ROWNUM <= v_LastIndex)    
-   WHERE rnum >= v_FirstIndex;
-end;
+--create or replace procedure GetResults 
+--(
+-- p_userId In Number,
+-- p_dueDateFrom In Date,
+-- p_dueDateTo in Date,
+-- p_durationMax in Number,
+-- p_durationMin in Number,
+-- p_sortColumn In Varchar2,
+-- p_sortOrder In Varchar2,
+-- p_pageSize In Number,
+-- p_pageIndex in number,
+-- cv_1 OUT SYS_REFCURSOR
+--)
+--as 
+--v_FirstIndex   NUMBER;
+--v_LastIndex    NUMBER;
+--begin
+---- Paging
+--  v_LastIndex := p_pageSize * (p_pageIndex + 1);
+--  v_FirstIndex := v_LastIndex - p_pageSize + 1;
+--
+-- OPEN cv_1 FOR 
+--
+--  SELECT * FROM (SELECT a.*, ROWNUM AS rnum
+--              FROM (Select * From Newjob nj Where nj.userId = p_userId  
+--               -- Filtering
+--             And ((p_dueDateFrom IS NULL AND p_dueDateTo Is NULL) OR 
+--                  (nj.Due_Date >= p_dueDateFrom and nj.Due_Date <= p_dueDateTo)
+--                 )
+--             And ((p_durationMax IS NULL AND p_durationMin Is NULL) OR 
+--                  (nj.Duration >= p_durationMax and nj.Duration <= p_durationMin)
+--                 )   
+--             -- Sorting     
+--            order by   
+--            Case when p_sortOrder = 'Ascending' And p_sortColumn = 'DUE_DATE' then  nj.Due_Date End,
+--            Case When p_sortOrder = 'Ascending' And p_sortColumn = 'DURATION' then nj.DURATION end,     
+--            Case when p_sortOrder = 'Descending' And p_sortColumn = 'DUE_DATE' then  nj.Due_Date End desc,
+--            Case When p_sortOrder = 'Descending' And p_sortColumn = 'DURATION' then nj.DURATION end desc)a
+--   WHERE ROWNUM <= v_LastIndex)    
+--   WHERE rnum >= v_FirstIndex;
+--end;

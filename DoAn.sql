@@ -1,4 +1,4 @@
---
+----
 --BEGIN
 --
 --FOR c IN (SELECT table_name FROM user_tables) LOOP
@@ -10,8 +10,8 @@
 --END LOOP;
 --
 --END;
-
-
+--
+--
 --purge recyclebin
 -- bonus point
 -- Gioi tinh khuyen mai
@@ -23,7 +23,8 @@ CREATE TABLE USERS (
     soDT NVARCHAR2(15),
     maLoaiNguoiDung SMALLINT DEFAULT 3,
     hoTen NVARCHAR2(15),
-
+    avatar NVARCHAR2(15),
+    
     CONSTRAINT PK_nguoidung PRIMARY KEY(taiKhoan)
 );
 
@@ -43,17 +44,17 @@ CREATE TABLE LOAINGUOIDUNG (
 );
 
 CREATE TABLE VE (
-    maVe SMALLINT NOT NULL,
+    maVe SMALLINT GENERATED as IDENTITY(START with 1 INCREMENT by 1),
     ngayDat DATE,
     giaVe NUMBER,
-    taiKhoanNguoiDung SMALLINT NOT NULL,
+    taiKhoan SMALLINT NOT NULL,
     maLichChieu SMALLINT NOT NULL,
     
     CONSTRAINT PK_ve PRIMARY KEY(maVe)
 );
 
 CREATE TABLE GHE (
-    maGhe SMALLINT NOT NULL,
+    maGhe SMALLINT GENERATED as IDENTITY(START with 1 INCREMENT by 1),
     tenGhe NVARCHAR2(30),
     maRap SMALLINT NOT NULL,
     stt SMALLINT NOT NULL,
@@ -65,7 +66,7 @@ CREATE TABLE GHE (
 );
 
 CREATE TABLE LOAIGHE (
-    maLoaiGhe SMALLINT NOT NULL,
+    maLoaiGhe SMALLINT GENERATED as IDENTITY(START with 1 INCREMENT by 1),
     tenLoaiGhe NVARCHAR2(50),
     moTa NVARCHAR2(50),
     chietKhau NUMBER(4,2),
@@ -117,13 +118,14 @@ CREATE TABLE PHIM (
 );
 
 CREATE TABLE THELOAI (
-    maTheLoai SMALLINT NOT NULL,
+    maTheLoai SMALLINT GENERATED as IDENTITY(START with 1 INCREMENT by 1),
     tenTheLoai NVARCHAR2(50),
 
     CONSTRAINT PK_theloai PRIMARY KEY(maTheLoai)
 );
 
-CREATE TABLE PHIM_THELOAI (
+CREATE TABLE PHIMTHELOAI (
+    isbn SMALLINT GENERATED as IDENTITY(START with 1 INCREMENT by 1),
     maPhim SMALLINT NOT NULL,
     maTheLoai SMALLINT NOT NULL,
 
@@ -144,6 +146,7 @@ CREATE TABLE LICHCHIEU (
 );
 
 CREATE TABLE DATVE (
+    isbn SMALLINT GENERATED as IDENTITY(START with 1 INCREMENT by 1),
     maVe SMALLINT NOT NULL,
     maGhe SMALLINT NOT NULL,
 
@@ -160,12 +163,11 @@ ALTER TABLE USERCREDENTIALS ADD CONSTRAINT FK_usercredentials_user FOREIGN KEY(t
 -- LOAINGUOIDUNG
 
 -- VE
-ALTER TABLE VE ADD CONSTRAINT FK_ve_nguoidung FOREIGN KEY(taiKhoanNguoiDung) REFERENCES USERS(taiKhoan);
-ALTER TABLE LICHCHIEU ADD CONSTRAINT FK_ve_lichchieu FOREIGN KEY (maLichChieu) REFERENCES LICHCHIEU(maLichChieu);
-
+ALTER TABLE VE ADD CONSTRAINT FK_ve_nguoidung FOREIGN KEY(taiKhoan) REFERENCES USERS(taiKhoan);
+ALTER TABLE VE ADD CONSTRAINT FK_ve_lichchieu FOREIGN KEY (maLichChieu) REFERENCES LICHCHIEU(maLichChieu);
 -- GHE
 ALTER TABLE GHE ADD CONSTRAINT FK_ghe_maloaighe FOREIGN KEY(maLoaiGhe) REFERENCES LOAIGHE(maLoaiGhe);
-
+ALTER TABLE GHE ADD CONSTRAINT FK_ghe_maRap FOREIGN KEY(maRap) references Rap(maRap);
 -- RAP
 ALTER TABLE RAP ADD CONSTRAINT FK_rap_cumrap FOREIGN KEY(maCumRap) REFERENCES CUMRAP(maCumRap);
 
@@ -177,9 +179,9 @@ ALTER TABLE CUMRAP ADD CONSTRAINT FK_cumrap_hethongrap FOREIGN KEY(maHeThongRap)
 -- HETHONGRAP
 -- PHIM
 -- THELOAI
--- PHIM_THELOAI
-ALTER TABLE PHIM_THELOAI ADD CONSTRAINT FK_phim_theloai_phim FOREIGN KEY(maPhim) REFERENCES PHIM(maPhim);
-ALTER TABLE PHIM_THELOAI ADD CONSTRAINT FK_phim_theloai_theloai FOREIGN KEY(maTheLoai) REFERENCES THELOAI(maTheLoai);
+-- PHIMTHELOAI
+ALTER TABLE PHIMTHELOAI ADD CONSTRAINT FK_phim_theloai_phim FOREIGN KEY(maPhim) REFERENCES PHIM(maPhim);
+ALTER TABLE PHIMTHELOAI ADD CONSTRAINT FK_phim_theloai_theloai FOREIGN KEY(maTheLoai) REFERENCES THELOAI(maTheLoai);
 
 -- LICHCHIEU
 ALTER TABLE LICHCHIEU ADD CONSTRAINT FK_lichchieu_phim FOREIGN KEY(maPhim) REFERENCES PHIM(maPhim);
@@ -255,3 +257,87 @@ ALTER TABLE DATVE ADD CONSTRAINT FK_datve_ghe FOREIGN KEY(maGhe)REFERENCES GHE(m
 --   WHERE ROWNUM <= v_LastIndex)    
 --   WHERE rnum >= v_FirstIndex;
 --end;
+
+
+
+-- Trigger 1 - Kiem tra ghe trung
+CREATE OR REPLACE TRIGGER GHETRUNG_DATVE
+BEFORE INSERT OR UPDATE ON DATVE
+FOR EACH ROW
+DECLARE
+v_checkTrung number;
+begin
+    select count(dv.maGhe) into v_checkTrung
+    from DatVe dv
+    Where dv.maGhe = 9;
+    
+    IF(v_checkTrung>=1)
+    THEN
+        RAISE_APPLICATION_ERROR(-20000, 'Ghe ' || :NEW.maGhe || ' nay da co nguoi dat');
+    end if;
+end;
+/
+-- Trigger 2 - SET Trang thai ghe
+CREATE OR REPLACE TRIGGER KICHHOAT_GHE_DATVE
+AFTER INSERT OR UPDATE ON DATVE
+FOR EACH ROW
+begin
+    update GHE
+    set kichHoat = '1'
+    where ghe.maGhe = :NEW.maGhe;
+    
+end;
+/
+-- Stored Procedure ho tro output
+--create or replace D
+--  vret integer := 0;
+--  vtxt varchar2(4000);
+--begin
+--  dbms_output.enable;
+--  while vret = 0 loop
+--    dbms_output.get_line(vtxt, vret);
+--    if vret = 0 then
+--      if p_output  is null then
+--        p_output := vtxt;
+--      else
+--       p_output := p_output || chr(10) || vtxt;
+--      end if;
+--    end if;
+--  end loop;
+--  dbms_output.disable;
+--end;
+-- Stored Procedure 1: Tinh tien ghe
+
+-- Function 1: Tinh tien ghe
+create or replace Function Ve_TinhTien(idGhe ghe.maGhe%type, giaVe number) return number
+as
+    giaTienMotGhe number;
+    chietKhau number;
+begin
+    select chietKhau into chietKhau
+    from LoaiGhe join Ghe
+    on LoaiGhe.maLoaiGhe = Ghe.maLoaiGhe
+    where Ghe.maGhe = idGhe;
+    giaTienMotGhe := giave - giave * (chietkhau/100);
+    return giaTienMotGhe;
+end;
+/
+set serveroutput on
+--declare kq number;
+--begin
+--kq:=Ve_TinhTien(15, 30000);
+--  declare
+--    kq number;
+--    begin
+--    kq:=Ve_TinhTien(15, 30000);
+--    DBMS_OUTPUT.PUT_LINE('KET QUA LA: ' || kq);
+--    end;
+--    Select Ve_TinhTien(15, 30000) from dual;
+--    
+--    
+--      declare
+--             rc sys_refcursor;
+--            begin
+--            open rc for Select Ve_TinhTien(15, 30000) from dual;
+--            dbms_sql.return_result(rc);
+--            end;

@@ -288,6 +288,23 @@ begin
     
 end;
 /
+-- Trigger 3 - Kiem tra maCumRap va maHeThongRap
+CREATE OR REPLACE TRIGGER KIEMTRA_MACUMRAP_MAHETHONGRAP
+BEFORE INSERT OR UPDATE ON CUMRAP
+FOR EACH ROW
+DECLARE 
+prefix varchar2(50);
+BEGIN
+SELECT NVL(SUBSTR(:new.tencumrap, 0, INSTR(:new.tencumrap, ' ')-1), :new.tencumrap) into prefix
+  FROM DUAL;
+  if(upper(prefix)!=:new.mahethongrap) then
+  raise_application_error(-20000,'Ma cum rap, ten cum rap phai co chu cai bat dau giong voi ma he thong rap');
+  end if;
+END;
+/
+
+--SELECT NVL(SUBSTR('ABC blah', 0, INSTR('ABC blah', ' ')-1), 'ABC blah') AS output
+--  FROM DUAL
 -- Stored Procedure ho tro output
 --create or replace D
 --  vret integer := 0;

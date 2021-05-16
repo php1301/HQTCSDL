@@ -1,4 +1,4 @@
-----
+--
 --BEGIN
 --
 --FOR c IN (SELECT table_name FROM user_tables) LOOP
@@ -60,7 +60,7 @@ CREATE TABLE GHE (
     stt SMALLINT NOT NULL,
     maLoaiGhe SMALLINT NOT NULL,
     -- 0 chua kich hoat, 1 da kich hoat
-    kichHoat char(1) DEFAULT '0',
+--    kichHoat char(1) DEFAULT '0',
 
     CONSTRAINT PK_ghe PRIMARY KEY(maGhe)
 );
@@ -153,6 +153,13 @@ CREATE TABLE DATVE (
     CONSTRAINT PK_datve PRIMARY KEY(maVe, maGhe)
 );
 
+CREATE TABLE GHEDADAT(
+    isbn SMALLINT GENERATED as IDENTITY(START with 1 INCREMENT by 1),
+    maGhe SMALLINT NOT NULL,
+    maLichChieu SMALLINT NOT NULL,
+
+    CONSTRAINT PK_ghedadat PRIMARY KEY(maGhe, maLichChieu)
+);
 
 -- USERS
 ALTER TABLE USERS ADD CONSTRAINT FK_nguoidung_loainguoidung FOREIGN KEY(maLoaiNguoiDung) REFERENCES LOAINGUOIDUNG(maLoaiNguoiDung);
@@ -193,6 +200,9 @@ ALTER TABLE LICHCHIEU ADD CONSTRAINT FK_lichchieu_hethongrap FOREIGN KEY(maHeTho
 ALTER TABLE DATVE ADD CONSTRAINT FK_datve_ve FOREIGN KEY(maVe)REFERENCES VE(maVe);
 ALTER TABLE DATVE ADD CONSTRAINT FK_datve_ghe FOREIGN KEY(maGhe)REFERENCES GHE(maGhe);
 
+-- GHEDADAT
+ALTER TABLE GHEDADAT ADD CONSTRAINT FK_ghedadat_lichchieu FOREIGN KEY(maLichChieu)REFERENCES LICHCHIEU(maLichChieu);
+ALTER TABLE GHEDADAT ADD CONSTRAINT FK_ghedadat_ghe FOREIGN KEY(maGhe)REFERENCES GHE(maGhe);
 
 -- To ADD: https://github.com/ciaranRoche/mySQL-movie-db/blob/master/database-triggers-scripts.sql
 -- TRIGGER 1: GIA VE KHONG DUOC BE HON 0
@@ -262,33 +272,47 @@ ALTER TABLE DATVE ADD CONSTRAINT FK_datve_ghe FOREIGN KEY(maGhe)REFERENCES GHE(m
 
 -- Trigger 1 - Kiem tra ghe trung
 CREATE OR REPLACE TRIGGER GHETRUNG_DATVE
-BEFORE INSERT OR UPDATE ON DATVE
+BEFORE INSERT OR UPDATE ON GHEDADAT
 FOR EACH ROW
 DECLARE
 v_checkTrung number;
-begin
-    select count(dv.maGhe) into v_checkTrung
-    from DatVe dv
-    Where dv.maGhe = 9;
+begin    
+    select count(gdd.maLichChieu) into v_checkTrung
+    from GheDaDat gdd
+    Where gdd.maGhe = :new.maGhe and gdd.maLichChieu = :new.maLichChieu;
     
     IF(v_checkTrung>=1)
     THEN
         RAISE_APPLICATION_ERROR(-20000, 'Ghe ' || :NEW.maGhe || ' nay da co nguoi dat');
+--    else
+
+--        insert into GHEDADAT values(default, :NEW.maGhe, vlichchieu);
     end if;
 end;
 /
--- Trigger 2 - SET Trang thai ghe
-CREATE OR REPLACE TRIGGER KICHHOAT_GHE_DATVE
-AFTER INSERT OR UPDATE ON DATVE
-FOR EACH ROW
-begin
-    update GHE
-    set kichHoat = '1'
-    where ghe.maGhe = :NEW.maGhe;
-    
-end;
-/
--- Trigger 3 - Kiem tra maCumRap va maHeThongRap
+---- Trigger 2 cancelled - INSERT VAO GHEDADAT
+--CREATE OR REPLACE TRIGGER THEM_VAO_GHEDADAT
+--AFTER INSERT OR UPDATE ON DATVE
+--FOR EACH ROW
+----FOLLOWS GHETRUNG_DATVE
+--declare 
+--vlichchieu number;
+--cursor c_ghe_ve(mv Ve.maVe%type) IS select maGhe 
+--                                    from DATVE 
+--                                    where maVe = mv;
+--begin
+--    select distinct maLichChieu into vlichchieu
+--    from DATVE dv, VE v 
+--    where dv.maVe = v.maVe;
+--    
+--    for g in c_ghe_ve(:new.maVe)
+--    loop
+--    insert into GHEDADAT values(default, g.maGhe, vlichchieu);
+--    end loop;
+--end;
+--/
+--alter trigger THEM_VAO_GHEDADAT disable;
+-- Trigger 2 - Kiem tra maCumRap va maHeThongRap
 CREATE OR REPLACE TRIGGER KIEMTRA_MACUMRAP_MAHETHONGRAP
 BEFORE INSERT OR UPDATE ON CUMRAP
 FOR EACH ROW
@@ -297,8 +321,8 @@ prefix varchar2(50);
 BEGIN
 SELECT NVL(SUBSTR(:new.tencumrap, 0, INSTR(:new.tencumrap, ' ')-1), :new.tencumrap) into prefix
   FROM DUAL;
-  if(upper(prefix)!=:new.mahethongrap) then
-  raise_application_error(-20000,'Ma cum rap, ten cum rap phai co chu cai bat dau giong voi ma he thong rap');
+  if(upper(prefix)!= upper(:new.mahethongrap)) then
+  raise_application_error(-20000,'Ma cum rap, ten cum rap phai co chu cai bat dau giong voi ma he thong rap' || prefix || :new.mahethongrap );
   end if;
 END;
 /

@@ -10,8 +10,8 @@
 --END LOOP;
 --
 --END;
---
---
+----
+----
 --purge recyclebin
 -- bonus point
 -- Gioi tinh khuyen mai
@@ -48,6 +48,9 @@ CREATE TABLE VE (
     ngayDat DATE,
     giaVe NUMBER,
     taiKhoan SMALLINT NOT NULL,
+    giamGia SMALLINT NOT NULL,
+    loaiVe varchar2(30),
+    hinhAnh varchar2(50),
     maLichChieu SMALLINT NOT NULL,
     
     CONSTRAINT PK_ve PRIMARY KEY(maVe)
@@ -326,7 +329,22 @@ SELECT NVL(SUBSTR(:new.tencumrap, 0, INSTR(:new.tencumrap, ' ')-1), :new.tencumr
   end if;
 END;
 /
-
+-- Trigger 3 - ngayChieuGioChieu phai sau ngayKhoiChieu cua phim
+CREATE OR REPLACE TRIGGER NGAYCHIEU_GIOCHIEU
+BEFORE INSERT OR UPDATE ON LICHCHIEU
+FOR EACH ROW
+DECLARE
+vNgayKhoiChieu DATE;
+begin
+    select TO_DATE(ngayKhoiChieu,'DD-MON-YYYY') into vNgayKhoiChieu
+    from Phim
+    where :New.maPhim = phim.maPhim;
+    
+    if(vNgayKhoiChieu > TO_DATE(:NEW.ngayChieuGioChieu,'DD-MON-YYYY')) then
+    raise_application_error(-20001 ,'Ngay chieu phai sau ngay khoi chieu ' || vNgayKhoiChieu || ' ' || TO_DATE(:NEW.ngayChieuGioChieu,'DD-MON-YYYY') );
+    end if;
+end;
+/
 --SELECT NVL(SUBSTR('ABC blah', 0, INSTR('ABC blah', ' ')-1), 'ABC blah') AS output
 --  FROM DUAL
 -- Stored Procedure ho tro output

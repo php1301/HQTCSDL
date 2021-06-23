@@ -20,9 +20,14 @@ CREATE TABLE USERS (
     taiKhoan SMALLINT GENERATED as IDENTITY(START with 1 INCREMENT by 1),
     password NVARCHAR2(100),
     email NVARCHAR2(30) UNIQUE,
+    username NVARCHAR2(50) UNIQUE,
     soDT NVARCHAR2(15),
-    maLoaiNguoiDung SMALLINT DEFAULT 3,
-    hoTen NVARCHAR2(15),
+    ngaySinh DATE,
+    diemTichLuy NUMBER DEFAULT 0,
+    tongDiemTichLuy NUMBER DEFAULT 0,
+    diaChi NVARCHAR2(100), 
+    maLoaiNguoiDung SMALLINT DEFAULT 2,
+    hoTen NVARCHAR2(15) default 'Ho Van Ten',
     avatar NVARCHAR2(15),
     
     CONSTRAINT PK_nguoidung PRIMARY KEY(taiKhoan)
@@ -37,7 +42,7 @@ CREATE TABLE USERCREDENTIALS (
 );
 
 CREATE TABLE LOAINGUOIDUNG (
-    maLoaiNguoiDung SMALLINT NOT NULL,
+    maLoaiNguoiDung SMALLINT GENERATED as IDENTITY(START with 1 INCREMENT by 1),
     tenLoai VARCHAR2(30),
 
     CONSTRAINT PK_loainguoidung PRIMARY KEY(maLoaiNguoiDung)
@@ -47,11 +52,13 @@ CREATE TABLE VE (
     maVe SMALLINT GENERATED as IDENTITY(START with 1 INCREMENT by 1),
     ngayDat DATE,
     giaVe NUMBER,
+    diemTichLuySuDung NUMBER,
     taiKhoan SMALLINT NOT NULL,
     giamGia SMALLINT NOT NULL,
     loaiVe varchar2(30),
     hinhAnh varchar2(50),
     maLichChieu SMALLINT NOT NULL,
+    khuyenMai varchar2(100),
     
     CONSTRAINT PK_ve PRIMARY KEY(maVe)
 );
@@ -345,6 +352,105 @@ begin
     end if;
 end;
 /
+-- Trigger 4 - ngayChieuGioChieu phai hop lý + 15 phut don dep
+CREATE OR REPLACE TRIGGER LICHCHIEU_NGAYCHIEUGIOCHIEU
+BEFORE INSERT OR UPDATE ON LichChieu
+FOR EACH ROW
+DECLARE
+ngayChieuVal varchar(100) := to_char(:NEW.ngayChieuGioChieu, 'DD.MM.YYYY');
+thoiGianBatDau varchar(100) := to_char(:NEW.ngayChieuGioChieu, 'DD.MM.YYYY HH24:MI:SS');
+thoiGianKetThuc varchar(100) := to_char(:NEW.ngayChieuGioChieu + NUMTODSINTERVAL(:NEW.thoiLuong + 15, 'MINUTE'), 'DD.MM.YYYY HH24:MI:SS');
+cursor c_lichChieu_gioHopLy IS select maLichChieu, thoiLuong, ngayChieuGioChieu as gioChieu
+                               from LichChieu
+                               where to_char(ngayChieuGioChieu, 'DD.MM.YYYY') = ngayChieuVal and maRap=:NEW.maRap;
+BEGIN
+        for lc in c_lichChieu_gioHopLy
+        loop
+        declare
+        --Thoi luong + 15 phut don dep        
+        minuteToAdd number := lc.thoiLuong + 15;
+        gioChieuBatDau varchar(100) := to_char(lc.gioChieu, 'DD.MM.YYYY HH24:MI:SS');
+        gioChieuXong varchar(100) := to_char(lc.gioChieu + NUMTODSINTERVAL(minuteToAdd, 'MINUTE'), 'DD.MM.YYYY HH24:MI:SS');
+        begin
+            if( (thoiGianBatDau BETWEEN gioChieuBatDau and gioChieuXong) OR (thoiGianKetThuc BETWEEN gioChieuBatDau and gioChieuXong) ) then
+              raise_application_error(-20003, thoiGianBatDau || ' ' || thoiGianKetThuc || ' L?i: Gi? chi?u b?t ??u ' 
+              || gioChieuBatDau ||' - Gi? chi?u xong ' || gioChieuXong ||  ' ??ng gi? chi?u v?i l?ch chi?u ' || lc.maLichChieu);
+            end if;
+        end;
+        end loop;
+END;
+/
+--SELECT '10:10:06' + INTERVAL 1 MINUTE from dual
+-- Trigger 5 - Cap nhat diem tich luy cho hoi vien khi dat ve
+CREATE OR REPLACE TRIGGER DIEMTICHLUY_DATVE
+BEFORE INSERT OR UPDATE ON Ve
+for each row
+declare 
+diemCongThem SMALLINT;
+taiKhoanVar SMALLINT;
+giaVeVar SMALLINT;
+diemTichLuyVar SMALLINT;
+diemTichLuyTongCongVar SMALLINT;
+begin
+    
+    select diemTichLuy, tongDiemTichLuy into diemTichLuyVar, diemTichLuyTongCongVar
+    from Users
+    where taiKhoan = :new.taiKhoan;
+    
+    diemCongThem:=:new.giaVe/1000;
+    update Users
+    set diemTichLuy = diemTichLuyVar + diemCongThem - :new.diemTichLuySuDung, tongDiemTichLuy = diemTichLuyTongCongVar + diemCongThem
+    where taiKhoan = :new.taiKhoan;
+    
+    EXCEPTION
+    WHEN others THEN 
+      raise_application_error(-20003,  taiKhoanVar || SUBSTR(SQLERRM, 1, 64) || giaVeVar || ' ' || diemCongThem || ' ' || diemTichLuyVar); 
+end;
+/
+-- TRIGGER 6 - Auto update maLoaiNguoiDung khi dat toi muc diem
+CREATE OR REPLACE TRIGGER DIEMTICHLUY_USERS
+AFTER INSERT OR UPDATE ON Ve
+for each row
+declare 
+tongDiem Number;
+maLoaiNguoiDungCu Number;
+taiKhoanVal smallint := :NEW.taiKhoan;
+begin
+    dbms_output.enable;
+    select tongDiemTichLuy, maLoaiNguoiDung into tongDiem, maLoaiNguoiDungCu
+    from Users
+    where taiKhoan = taiKhoanVal;
+    -- Than Thiet
+    if(tongDiem between 400 and 600) then
+    update Users
+    set maLoaiNguoiDung = 3
+    where taiKhoan = taiKhoanVal;
+    dbms_output.put_line('3');
+    -- Bac
+    elsif (tongDiem between 601 and 800) then
+    update Users
+    set maLoaiNguoiDung = 4
+    where taiKhoan = taiKhoanVal;
+    dbms_output.put_line('4');
+    -- Vang
+    elsif (tongDiem between 801 and 1000) then
+    update Users
+    set maLoaiNguoiDung = 5
+    where taiKhoan = taiKhoanVal;
+    dbms_output.put_line('5');
+    -- Kim Cuong
+    elsif (tongDiem between 1001 and 1200) then
+    update Users
+    set maLoaiNguoiDung = 6
+    where taiKhoan = taiKhoanVal;
+    elsif (maLoaiNguoiDungCu <> 1 and maLoaiNguoiDungCu <> 6 and tongDiem > 1200) then
+    update Users
+    set maLoaiNguoiDung = 6
+    where taiKhoan = taiKhoanVal;
+    dbms_output.put_line('6');
+    end if;
+end;
+/
 --SELECT NVL(SUBSTR('ABC blah', 0, INSTR('ABC blah', ' ')-1), 'ABC blah') AS output
 --  FROM DUAL
 -- Stored Procedure ho tro output
@@ -365,7 +471,104 @@ end;
 --  end loop;
 --  dbms_output.disable;
 --end;
--- Stored Procedure 1: Tinh tien ghe
+
+-- Type 1: cho SP2
+create or replace type sp2type as object
+(
+    thang varchar2(30),
+    doanhThu number
+);
+/
+-- Type 1.1: Table type cho SP2
+create or replace type tabSp2 is table of sp2type;
+/
+
+-- Type 2: cho SP3
+create or replace type sp3type as object
+(
+    tenHeThongRap varchar2(50),
+    doanhThu number
+);
+/
+-- Type 2.1: Table type cho SP3
+create or replace type tabSp3 is table of sp3type;
+/
+
+-- Type 3: cho SP4
+create or replace type sp4type as object
+(
+    tenPhim varchar2(30),
+    maPhim smallint,
+    doanhThu number
+);
+/
+-- Type 3.1: Table type cho SP4
+create or replace type tabSp4 is table of sp4type;
+/
+
+-- Stored Procedure 1: Ki?m tra xem ph?i tháng sinh nh?t không
+CREATE OR REPLACE PROCEDURE Is_BirthDayMonth(user_birthday varchar, checkVal out SMALLINT)
+AS
+monthSystem varchar2(100);
+begin
+    select to_char(sysdate, 'mm') into monthSystem from dual;
+    
+    if(monthSystem = user_birthday) then
+    begin
+    checkVal:=1;
+    end;
+    else
+    begin
+    checkVal:=2;
+    end;
+    end if;
+end;
+/
+
+-- Stored Procedure 2: Báo cáo doanh thu theo tháng
+CREATE OR REPLACE PROCEDURE BAOCAODOANHTHUTHEOTHANG(sp2Record out tabSp2)
+as
+begin
+    select sp2Type(TO_CHAR(v.ngayDat, 'MM'), sum(v.giaVe))
+    BULK   COLLECT INTO sp2Record
+    from Ve v
+    GROUP BY TO_CHAR(v.ngayDat, 'MM')
+    ORDER BY  sum(v.giaVe) desc;
+end;
+/
+
+-- Stored Procedure 3: Báo cáo doanh thu theo h? th?ng r?p
+CREATE OR REPLACE PROCEDURE BAOCAODOANHTHUTHEOHETHONGRAP(sp3Record out tabSp3)
+AS
+BEGIN
+    select sp3Type(htr.tenHeThongRap, sum(v.giaVe))
+    BULK   COLLECT INTO sp3Record
+    from Ve v, lichChieu lc, HeThongRap htr
+    where v.maLichChieu = lc.maLichChieu and lc.maHeThongRap = htr.maHeThongRap
+    GROUP BY htr.tenHeThongRap
+    ORDER BY sum(v.giaVe) DESC;
+END;
+/
+
+-- Stored Procedure 4: Báo cáo doanh thu theo Phim
+CREATE OR REPLACE PROCEDURE BAOCAODOANHTHUTHEOPHIM(sp4Record out tabSp4, numOfRes Number DEFAULT 10)
+AS
+BEGIN
+    select sp4Type(p.tenPhim, p.maPhim, sum(v.giaVe))
+    BULK   COLLECT INTO sp4Record
+    from Ve v, lichChieu lc, Phim p
+    where v.maLichChieu = lc.maLichChieu and lc.maPhim = p.maPhim
+    GROUP BY p.tenPhim, p.maPhim
+    ORDER BY sum(v.giaVe) desc
+    FETCH NEXT numOfRes ROWS ONLY;
+END;
+/
+--DECLARE
+--    amount smallint:=0;
+--BEGIN
+--    Is_BirthDayMonth('09-06-2002', amount);
+--    select min(amount) from dual;
+--END;
 
 -- Function 1: Tinh tien ghe
 create or replace Function Ve_TinhTien(idGhe ghe.maGhe%type, giaVe number) return number
@@ -381,7 +584,60 @@ begin
     return giaTienMotGhe;
 end;
 /
+
+-- Function 2: G?i procedure ? trên, ph?c v? cho l?y giá tr? ra thay vì dbms_output
+create or replace Function call_proc_isBirthday(user_birthday varchar) return number
+as
+kq number:=0;
+BEGIN
+    Is_BirthDayMonth(user_birthday, kq);
+    return kq;
+END;
+/
+--select call_proc_isBirthday('08') from dual;
+
+-- Function 3: G?i báo cáo doanh thu theo tháng
+create or replace Function callProcedure2 return tabSp2
+as
+sp2Record tabSp2;
+BEGIN
+    baocaodoanhthutheothang(sp2Record);
+    return sp2Record;
+END;
+/
+
+-- Function 4: G?i báo cáo doanh thu theo h? th?ng r?p
+create or replace Function callProcedure3 return tabSp3
+as
+sp3Record tabSp3;
+BEGIN
+    baocaodoanhthutheohethongrap(sp3Record);
+    return sp3Record;
+END;
+/
+
+-- Function 5: G?i báo cáo doanh thu theo phim
+create or replace Function callProcedure4(numOfRecord Number default 10) return tabSp4
+as
+sp4Record tabSp4;
+BEGIN
+    baocaodoanhthutheophim(sp4Record, numOfRecord);
+    return sp4Record;
+END;
+/
+--declare
+--x tabSp2;
+--begin
+--x:= callProcedure2();
+--end;
+
+select JSON_ARRAY(callProcedure3()) as result from dual;
+
 set serveroutput on
+select
+   sessiontimezone
+from
+   dual;
 --declare kq number;
 --begin
 --kq:=Ve_TinhTien(15, 30000);
